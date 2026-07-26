@@ -99,13 +99,18 @@
     }
 
     .content {
-      width: 100%;
-      flex: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 105px;
 
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      align-items: center;
+  width: 100%;
+  padding: 0 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
       padding: 30px 20px 35px;
     }
@@ -220,15 +225,18 @@
       }
 
       .content {
-        justify-content: flex-end;
-        padding: 20px 14px 30px;
-      }
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 125px;
 
-      .social-buttons {
-        width: min(94%, 390px);
-        gap: 10px;
-        padding: 13px;
-      }
+  width: 100%;
+  padding: 0 14px;
+
+  display: flex;
+  justify-content: center;
+}
+  
 
       .social-button {
         flex: 1 1 42%;
@@ -250,6 +258,10 @@
 
       .content {
         padding-bottom: 24px;
+        .content {
+  bottom: 135px;
+  padding: 0 12px;
+}
       }
 
       .social-buttons {
