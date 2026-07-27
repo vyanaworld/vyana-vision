@@ -243,10 +243,185 @@ footer {
 .legal-links a:focus-visible {
   color: var(--color-white);
 }
+/* =========================================================
+   Central Hero Content
+   ========================================================= */
 
+.hero-center {
+  position: relative;
+  z-index: 4;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: min(760px, 90%);
+  margin: auto;
+  padding: 80px 20px 245px;
+
+  text-align: center;
+}
+
+.hero-logo {
+  width: clamp(130px, 15vw, 210px);
+  margin-bottom: 2px;
+
+  filter:
+    drop-shadow(0 0 18px rgba(138, 46, 255, 0.7))
+    drop-shadow(0 0 34px rgba(0, 200, 255, 0.32));
+}
+
+.v-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.v-logo-path {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 0;
+}
+
+.hero-title {
+  margin-top: -8px;
+
+  font-size: clamp(32px, 5vw, 68px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: clamp(5px, 1vw, 12px);
+
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.4),
+    0 0 22px rgba(138, 46, 255, 0.72),
+    0 0 42px rgba(0, 200, 255, 0.25);
+}
+
+.hero-tagline {
+  margin-top: 17px;
+
+  color: rgba(255, 255, 255, 0.78);
+  font-size: clamp(11px, 1.2vw, 15px);
+  font-weight: 400;
+  letter-spacing: clamp(3px, 0.65vw, 8px);
+}
+
+.hero-tagline span {
+  color: var(--color-violet);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 13px;
+
+  margin-top: 30px;
+}
+
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 158px;
+  min-height: 46px;
+  padding: 12px 22px;
+
+  border: 1px solid rgba(182, 108, 255, 0.55);
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(138, 46, 255, 0.18),
+      rgba(0, 200, 255, 0.1)
+    );
+
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+
+  box-shadow:
+    inset 0 0 16px rgba(255, 255, 255, 0.035),
+    0 0 16px rgba(138, 46, 255, 0.18);
+
+  transition:
+    transform var(--transition-fast),
+    border-color var(--transition-fast),
+    background var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.hero-button:hover,
+.hero-button:focus-visible {
+  transform: translateY(-3px);
+
+  border-color: rgba(0, 200, 255, 0.82);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(138, 46, 255, 0.4),
+      rgba(0, 200, 255, 0.25)
+    );
+
+  box-shadow:
+    0 0 18px rgba(138, 46, 255, 0.5),
+    0 0 28px rgba(0, 200, 255, 0.25);
+}
+
+.hero-button-primary {
+  border-color: rgba(182, 108, 255, 0.9);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(138, 46, 255, 0.52),
+      rgba(0, 200, 255, 0.3)
+    );
+}
 /* Tablet and Mobile */
 
-@media (max-width: 768px) {
+@media (max-width: 768px) {  .hero-center {
+    width: 100%;
+    padding: 34px 16px 330px;
+  }
+
+  .hero-logo {
+    width: clamp(110px, 35vw, 155px);
+  }
+
+  .hero-title {
+    margin-top: -5px;
+    font-size: clamp(27px, 8.5vw, 42px);
+    letter-spacing: clamp(3px, 1.8vw, 7px);
+  }
+
+  .hero-tagline {
+    margin-top: 12px;
+    font-size: clamp(9px, 2.7vw, 12px);
+    letter-spacing: clamp(2px, 1.1vw, 5px);
+  }
+
+  .hero-actions {
+    gap: 8px;
+    margin-top: 21px;
+  }
+
+  .hero-button {
+    min-width: 0;
+    min-height: 38px;
+    padding: 9px 13px;
+
+    font-size: 10px;
+    letter-spacing: 0.65px;
+  }
   .hero {
     background-color: var(--color-background);
     background-position: center 78px;
@@ -324,7 +499,24 @@ footer {
 
 /* Small Mobile */
 
-@media (max-width: 390px) {
+@media (max-width: 390px) {  .hero-center {
+    padding-right: 10px;
+    padding-bottom: 300px;
+    padding-left: 10px;
+  }
+
+  .hero-actions {
+    width: 100%;
+    gap: 7px;
+  }
+
+  .hero-button {
+    flex: 1 1 30%;
+    padding-right: 5px;
+    padding-left: 5px;
+
+    font-size: 9px;
+  }
   .brand {
     font-size: 16px;
     letter-spacing: 2px;
