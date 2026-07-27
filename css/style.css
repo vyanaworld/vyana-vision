@@ -391,6 +391,7 @@ footer {
 @media (max-width: 768px) {  .hero-center {
     width: 100%;
     padding: 18px 16px 330px;
+    transform: translateY(68px);
   }
 
   .hero-logo {
