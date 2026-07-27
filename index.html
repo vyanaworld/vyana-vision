@@ -42,7 +42,99 @@
         <a href="impressum.html">Impressum</a>
       </nav>
     </header>
+<div class="hero-center">
 
+  <div
+    class="hero-logo"
+    aria-label="VYANA VISION logo"
+  >
+    <svg
+      class="v-logo"
+      viewBox="0 0 220 180"
+      role="img"
+      aria-hidden="true"
+    >
+      <defs>
+        <linearGradient
+          id="v-gradient"
+          x1="0%"
+          y1="0%"
+          x2="100%"
+          y2="100%"
+        >
+          <stop offset="0%" stop-color="#00c8ff"></stop>
+          <stop offset="48%" stop-color="#b66cff"></stop>
+          <stop offset="100%" stop-color="#8a2eff"></stop>
+        </linearGradient>
+
+        <filter
+          id="v-glow"
+          x="-70%"
+          y="-70%"
+          width="240%"
+          height="240%"
+        >
+          <feGaussianBlur
+            stdDeviation="7"
+            result="blur"
+          ></feGaussianBlur>
+
+          <feMerge>
+            <feMergeNode in="blur"></feMergeNode>
+            <feMergeNode in="SourceGraphic"></feMergeNode>
+          </feMerge>
+        </filter>
+      </defs>
+
+      <path
+        class="v-logo-path"
+        d="M30 30 L110 150 L190 30"
+        fill="none"
+        stroke="url(#v-gradient)"
+        stroke-width="17"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        filter="url(#v-glow)"
+      ></path>
+    </svg>
+  </div>
+
+  <h1 class="hero-title">
+    VYANA VISION
+  </h1>
+
+  <p class="hero-tagline">
+    MUSIC <span>•</span> EMOTION <span>•</span> VISION
+  </p>
+
+  <div class="hero-actions">
+
+    <a
+      class="hero-button hero-button-primary"
+      href="#music"
+    >
+      LISTEN
+    </a>
+
+    <a
+      class="hero-button"
+      href="https://www.youtube.com/@vyanavision"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      WATCH VIDEO
+    </a>
+
+    <a
+      class="hero-button"
+      href="#music"
+    >
+      LATEST RELEASE
+    </a>
+
+  </div>
+
+</div>
     <main class="content">
       <div
         class="social-buttons"
