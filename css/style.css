@@ -59,8 +59,7 @@ body {
       rgba(0, 0, 0, 0.02) 62%,
       rgba(0, 0, 0, 0.78)
     ),
-    url("../vyana-vision-background.png.png");
-
+    url("../assets/vyana-vision-hero-aurora.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
