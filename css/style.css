@@ -389,31 +389,35 @@ footer {
 /* Tablet and Mobile */
 
 @media (max-width: 768px) {  .hero-center {
-    width: 100%;
-    padding: 18px 16px 330px;
-    transform: translateY(68px);
-  }
+  position: absolute;
+  top: 57%;
+  left: 0;
 
-  .hero-logo {
-    width: clamp(110px, 35vw, 155px);
-  }
+  width: 100%;
+  margin: 0;
+  padding: 0 18px;
 
-  .hero-title {
-    margin-top: -5px;
-    font-size: clamp(27px, 8.5vw, 42px);
-    letter-spacing: clamp(3px, 1.8vw, 7px);
-  }
+  transform: none;
+}
 
-  .hero-tagline {
-    margin-top: 12px;
-    font-size: clamp(9px, 2.7vw, 12px);
-    letter-spacing: clamp(2px, 1.1vw, 5px);
-  }
+.hero-tagline {
+  margin-top: 0;
 
-  .hero-actions {
-    gap: 8px;
-    margin-top: 21px;
-  }
+  font-size: clamp(8px, 2.25vw, 10px);
+  line-height: 1.3;
+  letter-spacing: clamp(1.5px, 0.75vw, 3px);
+
+  white-space: nowrap;
+
+  text-shadow:
+    0 0 8px rgba(0, 0, 0, 0.82),
+    0 0 14px rgba(138, 46, 255, 0.3);
+}
+
+.hero-actions {
+  gap: 8px;
+  margin-top: 44px;
+}
 
   .hero-button {
     min-width: 0;
@@ -492,7 +496,7 @@ footer {
     justify-content: center;
     gap: 13px;
   }
-
+                           
   .legal-links a {
     margin: 0;
     font-size: 14px;
@@ -502,11 +506,16 @@ footer {
 /* Small Mobile */
 
 @media (max-width: 390px) {  .hero-center {
-    padding-right: 10px;
-    padding-bottom: 300px;
-    padding-left: 10px;
-  }
+  top: 56%;
+  padding-right: 10px;
+  padding-left: 10px;
+}
 
+  .hero-tagline {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+  }
+                           
   .hero-actions {
     width: 100%;
     gap: 7px;
