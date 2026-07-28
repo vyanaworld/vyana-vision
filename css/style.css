@@ -544,6 +544,10 @@ footer {
     width: 62%;
   }
 
+ .content {
+    margin-top: 8px;
+  }  
+
   .hero-button {
     padding-right: 5px;
     padding-left: 5px;
