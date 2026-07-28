@@ -261,42 +261,6 @@ footer {
   text-align: center;
 }
 
-.hero-logo {
-    width: clamp(145px, 17vw, 235px);
-    margin-bottom: -10px;
-}
-
-  filter:
-    drop-shadow(0 0 18px rgba(138, 46, 255, 0.7))
-    drop-shadow(0 0 34px rgba(0, 200, 255, 0.32));
-}
-
-.v-logo {
-  display: block;
-  width: 100%;
-  height: auto;
-  overflow: visible;
-}
-
-.v-logo-path {
-  stroke-dasharray: 400;
-  stroke-dashoffset: 0;
-}
-
-.hero-title {
-  margin-top: -8px;
-
-  font-size: clamp(32px, 5vw, 68px);
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: clamp(5px, 1vw, 12px);
-
-  text-shadow:
-    0 0 10px rgba(255, 255, 255, 0.4),
-    0 0 22px rgba(138, 46, 255, 0.72),
-    0 0 42px rgba(0, 200, 255, 0.25);
-}
-
 .hero-tagline {
   margin-top: 17px;
 
@@ -560,9 +524,9 @@ footer {
   }
 
   .hero-center {
-    margin-top: -43px;
-    padding-right: 10px;
-    padding-left: 10px;
+  margin-top: -155px;
+  padding-right: 10px;
+  padding-left: 10px;
   }
 
   .hero-tagline {
@@ -572,7 +536,7 @@ footer {
 
   .hero-actions {
     gap: 8px;
-    margin-top: 105px;
+    margin-top: 217px;
   }
 
   .hero-actions .hero-button:last-child {
