@@ -361,7 +361,7 @@ footer {
     padding-top: calc(78px + 66.67vw);
 
     background-color: var(--color-background);
-    background-position: center 78px;
+    background-position: center 55px;
     background-size: 100% auto;
     background-repeat: no-repeat;
   }
@@ -426,7 +426,7 @@ footer {
 
     width: 100%;
     max-width: 390px;
-    margin-top: 98px;
+    margin-top: 90px;
   }
 
   .hero-actions .hero-button:last-child {
@@ -573,7 +573,7 @@ footer {
   }
 
   footer {
-    margin-top: 55px;
+    margin-top: 35px;
     font-size: 11px;
   }
 }
