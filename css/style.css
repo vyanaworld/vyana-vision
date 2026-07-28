@@ -537,7 +537,7 @@ footer {
 
   .hero-actions {
     gap: 8px;
-    margin-top: 142px;
+    margin-top: 110px;
   }
 
   .hero-actions .hero-button:last-child {
@@ -545,7 +545,7 @@ footer {
   }
 
  .content {
-    margin-top: 8px;
+    margin-top: 0px;
   }  
 
   .hero-button {
@@ -573,7 +573,7 @@ footer {
   }
 
   footer {
-    margin-top: 100px;
+    margin-top: 55px;
     font-size: 11px;
   }
 }
