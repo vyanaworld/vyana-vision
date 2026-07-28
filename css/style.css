@@ -391,7 +391,7 @@ footer {
 @media (max-width: 768px) {  .hero-center {
   position: absolute;
   z-index: 4;
-  top: 347px;
+  top: 267px;
   left: 0;
 
   width: 100%;
@@ -430,7 +430,7 @@ footer {
 
   width: 100%;
   max-width: 390px;
-  margin-top: 127px;
+  margin-top: 207px;
 
   pointer-events: auto;
 }
@@ -528,7 +528,6 @@ footer {
 /* Small Mobile */
 
 @media (max-width: 390px) {  .hero-center {
-  top: 56%;
   padding-right: 10px;
   padding-left: 10px;
 }
