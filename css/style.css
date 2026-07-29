@@ -532,7 +532,7 @@ footer {
   .hero-tagline {
   font-size: 8px;
   letter-spacing: 1.5px;
-  margin-top: -40px;
+  margin-top: -36px;
   }
 
   .hero-actions {
@@ -545,7 +545,7 @@ footer {
   }
 
  .content {
-    margin-top: -1px;
+    margin-top: 1px;
   }  
 
   .hero-button {
