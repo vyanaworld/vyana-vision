@@ -669,6 +669,41 @@ footer {
     margin: 0;
     font-size: 14px;
   }
+
+     /* The World of VYANA */
+
+  .world-section {
+    min-height: 620px;
+    padding: 90px 22px;
+  }
+
+  .world-symbol {
+    top: 47%;
+    font-size: 340px;
+  }
+
+  .world-label {
+    margin-bottom: 20px;
+    font-size: 10px;
+    letter-spacing: 3.4px;
+  }
+
+  .world-content h2 {
+    margin-bottom: 25px;
+    font-size: 38px;
+    line-height: 1.12;
+  }
+
+  .world-description {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .world-signature {
+    margin-top: 34px;
+    font-size: 17px;
+    letter-spacing: 1.4px;
+  }
 }
 
 /* Small Mobile */
@@ -732,6 +767,122 @@ footer {
     margin-top: 20px;
     font-size: 11px;
   }
+}
+
+/* =========================================================
+   The World of VYANA
+   ========================================================= */
+
+.world-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 720px;
+  padding: 120px 24px;
+
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(110, 35, 255, 0.18),
+      transparent 38%
+    ),
+    linear-gradient(
+      180deg,
+      #020207 0%,
+      #070313 48%,
+      #020207 100%
+    );
+}
+
+.world-glow {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  z-index: -2;
+
+  width: 520px;
+  height: 520px;
+
+  border-radius: 50%;
+
+  background: rgba(111, 35, 255, 0.13);
+  filter: blur(100px);
+  transform: translateX(-50%);
+
+  pointer-events: none;
+}
+
+.world-symbol {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+
+  color: rgba(182, 108, 255, 0.055);
+  font-size: clamp(280px, 42vw, 620px);
+  font-weight: 700;
+  line-height: 0.75;
+
+  text-shadow:
+    0 0 55px rgba(138, 46, 255, 0.1),
+    0 0 100px rgba(0, 200, 255, 0.06);
+
+  transform: translate(-50%, -50%);
+  user-select: none;
+  pointer-events: none;
+}
+
+.world-content {
+  width: min(760px, 100%);
+  text-align: center;
+}
+
+.world-label {
+  margin-bottom: 24px;
+
+  color: var(--color-violet);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+.world-content h2 {
+  margin-bottom: 30px;
+
+  color: var(--color-white);
+  font-size: clamp(34px, 5vw, 64px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+
+  text-shadow:
+    0 0 24px rgba(138, 46, 255, 0.2);
+}
+
+.world-description {
+  max-width: 680px;
+  margin: 0 auto 18px;
+
+  color: rgba(255, 255, 255, 0.7);
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.75;
+}
+
+.world-signature {
+  margin-top: 42px;
+
+  color: #f3df59;
+  font-size: clamp(17px, 2vw, 22px);
+  font-weight: 600;
+  letter-spacing: 2px;
+
+  text-shadow:
+    0 0 16px rgba(243, 223, 89, 0.2);
 }
 
 /* Reduced motion */
