@@ -268,7 +268,8 @@ footer {
   margin-bottom: 9px;
 }
 
-.legal-links a {
+.legal-links a,
+.legal-links a:visited {
   margin: 0 8px;
   color: rgba(255, 255, 255, 0.76);
   text-decoration: none;
