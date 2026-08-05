@@ -293,7 +293,11 @@ footer {
 
   width: min(760px, 90%);
   margin: auto;
-  padding: 40px 20px 245px;
+
+  padding:
+    clamp(300px, 43vh, 430px)
+    20px
+    clamp(130px, 18vh, 210px);
 
   text-align: center;
 }
