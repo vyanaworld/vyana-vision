@@ -1110,3 +1110,24 @@ footer {
     animation-iteration-count: 1 !important;
   }
 }
+
+/* =========================================================
+   Final responsive visibility rules
+   ========================================================= */
+
+/* Soundline navigation must never appear on mobile */
+@media (max-width: 768px) {
+  .desktop-soundlines {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  .hero-actions {
+    display: flex !important;
+  }
+
+  .content {
+    display: block !important;
+  }
+}
