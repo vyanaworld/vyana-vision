@@ -388,6 +388,215 @@ footer {
     );
 }
 
+/* =========================================================
+   Desktop Soundline Navigation
+   ========================================================= */
+
+.desktop-soundlines {
+  display: none;
+}
+
+.soundline-group {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: clamp(18px, 2vw, 32px);
+}
+
+.soundline-button {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 7px;
+
+  min-width: 62px;
+  padding: 7px 5px;
+
+  color: rgba(255, 255, 255, 0.76);
+  text-decoration: none;
+
+  transition:
+    color var(--transition-fast),
+    transform var(--transition-fast),
+    filter var(--transition-fast);
+}
+
+.soundline-button:visited {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.soundline-wave {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 3px;
+
+  width: 34px;
+  height: 18px;
+
+  filter:
+    drop-shadow(0 0 4px rgba(182, 108, 255, 0.42))
+    drop-shadow(0 0 8px rgba(0, 200, 255, 0.16));
+}
+
+.soundline-wave i {
+  display: block;
+
+  width: 3px;
+  border-radius: 999px;
+
+  background: linear-gradient(
+    to top,
+    rgba(138, 46, 255, 0.88),
+    rgba(0, 200, 255, 0.92)
+  );
+}
+
+/* Different static wave shapes */
+
+.soundline-wave i:nth-child(1) {
+  height: 6px;
+}
+
+.soundline-wave i:nth-child(2) {
+  height: 14px;
+}
+
+.soundline-wave i:nth-child(3) {
+  height: 9px;
+}
+
+.soundline-wave i:nth-child(4) {
+  height: 17px;
+}
+
+.soundline-wave i:nth-child(5) {
+  height: 7px;
+}
+
+.soundline-wave-2 i:nth-child(1) {
+  height: 9px;
+}
+
+.soundline-wave-2 i:nth-child(2) {
+  height: 17px;
+}
+
+.soundline-wave-2 i:nth-child(3) {
+  height: 12px;
+}
+
+.soundline-wave-2 i:nth-child(4) {
+  height: 6px;
+}
+
+.soundline-wave-2 i:nth-child(5) {
+  height: 14px;
+}
+
+.soundline-wave-3 i:nth-child(1) {
+  height: 6px;
+}
+
+.soundline-wave-3 i:nth-child(2) {
+  height: 10px;
+}
+
+.soundline-wave-3 i:nth-child(3) {
+  height: 18px;
+}
+
+.soundline-wave-3 i:nth-child(4) {
+  height: 12px;
+}
+
+.soundline-wave-3 i:nth-child(5) {
+  height: 7px;
+}
+
+.soundline-wave-4 i:nth-child(1) {
+  height: 10px;
+}
+
+.soundline-wave-4 i:nth-child(2) {
+  height: 6px;
+}
+
+.soundline-wave-4 i:nth-child(3) {
+  height: 14px;
+}
+
+.soundline-wave-4 i:nth-child(4) {
+  height: 17px;
+}
+
+.soundline-wave-4 i:nth-child(5) {
+  height: 9px;
+}
+
+.soundline-label {
+  font-size: 8px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 1.35px;
+  white-space: nowrap;
+
+  text-shadow:
+    0 0 7px rgba(138, 46, 255, 0.26);
+}
+
+.soundline-button:hover,
+.soundline-button:focus-visible {
+  color: var(--color-white);
+  transform: translateY(-2px);
+
+  filter:
+    drop-shadow(0 0 7px rgba(182, 108, 255, 0.35));
+}
+
+.soundline-button:hover .soundline-wave,
+.soundline-button:focus-visible .soundline-wave {
+  filter:
+    drop-shadow(0 0 6px rgba(182, 108, 255, 0.75))
+    drop-shadow(0 0 12px rgba(0, 200, 255, 0.38));
+}
+
+@media (min-width: 769px) {
+  /*
+    Existing large Hero controls remain available only
+    on tablet and mobile.
+  */
+
+  .hero-actions,
+  .content {
+    display: none;
+  }
+
+  .desktop-soundlines {
+    position: absolute;
+    top: 47.5%;
+    left: 50%;
+    z-index: 6;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(80px, 9vw, 150px);
+
+    width: min(820px, 67vw);
+
+    transform: translate(-50%, -50%);
+  }
+
+  .soundline-group-vyana {
+    justify-self: center;
+  }
+
+  .soundline-group-vision {
+    justify-self: center;
+  }
+}
+
 /* Tablet and Mobile */
 
 @media (max-width: 768px) {
