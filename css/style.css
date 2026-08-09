@@ -595,12 +595,14 @@ footer {
   }
 
   .soundline-group-vyana {
-    justify-self: center;
-  }
+  justify-self: center;
+  transform: translateX(34px);
+}
 
-  .soundline-group-vision {
-    justify-self: center;
-  }
+.soundline-group-vision {
+  justify-self: center;
+  transform: translateX(-34px);
+}
 }
 
 /* Tablet and Mobile */
