@@ -2140,3 +2140,144 @@ footer {
   }
 
 }
+
+/* =========================================================
+   FINAL DESKTOP — THE WORLD OF VYANA
+   ========================================================= */
+
+@media (min-width: 769px) {
+
+  .world-section {
+    position: relative !important;
+    isolation: isolate;
+    overflow: hidden;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 100%;
+    min-height: 720px !important;
+
+    padding: 120px 24px !important;
+
+    background:
+      radial-gradient(
+        circle at 50% 35%,
+        rgba(110, 35, 255, 0.18),
+        transparent 38%
+      ),
+      linear-gradient(
+        180deg,
+        #020207 0%,
+        #070313 48%,
+        #020207 100%
+      ) !important;
+  }
+
+  .world-glow {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    z-index: -2;
+
+    width: 520px;
+    height: 520px;
+
+    border-radius: 50%;
+
+    background: rgba(111, 35, 255, 0.13);
+    filter: blur(100px);
+
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+
+  .world-symbol {
+    position: absolute !important;
+
+    top: 50% !important;
+    left: 50% !important;
+
+    z-index: -1;
+
+    color: rgba(182, 108, 255, 0.055);
+
+    font-size: clamp(280px, 42vw, 620px) !important;
+    font-weight: 700;
+    line-height: 0.75;
+
+    text-shadow:
+      0 0 55px rgba(138, 46, 255, 0.1),
+      0 0 100px rgba(0, 200, 255, 0.06);
+
+    transform: translate(-50%, -50%) !important;
+
+    user-select: none;
+    pointer-events: none;
+  }
+
+  .world-content {
+    position: relative;
+    z-index: 2;
+
+    width: min(760px, 100%) !important;
+    margin: 0 auto !important;
+
+    text-align: center !important;
+  }
+
+  .world-label {
+    margin-bottom: 24px !important;
+
+    color: var(--color-violet) !important;
+
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    letter-spacing: 5px !important;
+  }
+
+  .world-content h2 {
+    margin: 0 0 30px !important;
+
+    color: var(--color-white) !important;
+
+    font-size: clamp(34px, 5vw, 64px) !important;
+    font-weight: 500 !important;
+    line-height: 1.08 !important;
+    letter-spacing: -1.5px !important;
+
+    text-align: center !important;
+
+    text-shadow:
+      0 0 24px rgba(138, 46, 255, 0.2);
+  }
+
+  .world-description {
+    max-width: 680px !important;
+
+    margin: 0 auto 18px !important;
+
+    color: rgba(255, 255, 255, 0.7) !important;
+
+    font-size: clamp(16px, 2vw, 20px) !important;
+    line-height: 1.75 !important;
+
+    text-align: center !important;
+  }
+
+  .world-signature {
+    margin-top: 42px !important;
+
+    color: #f3df59 !important;
+
+    font-size: clamp(17px, 2vw, 22px) !important;
+    font-weight: 600 !important;
+    letter-spacing: 2px !important;
+
+    text-align: center !important;
+
+    text-shadow:
+      0 0 16px rgba(243, 223, 89, 0.2);
+  }
+}
