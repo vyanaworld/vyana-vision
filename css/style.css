@@ -2012,7 +2012,7 @@ footer {
 @media (max-width: 768px) {
 
   .soundline-group-vision {
-    margin-top: -6px;
+    margin-top: -10px;
   }
 
 }
@@ -2020,7 +2020,7 @@ footer {
 @media (max-width: 390px) {
 
   .soundline-group-vision {
-    margin-top: -8px;
+    margin-top: -12px;
   }
 
 }
