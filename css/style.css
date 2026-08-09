@@ -1139,3 +1139,52 @@ footer {
     display: block !important;
   }
 }
+
+/* =========================================================
+   FINAL MOBILE PROTECTION
+   Do not allow desktop Hero styles to affect mobile
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* Desktop soundlines OFF */
+  .desktop-soundlines {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  /* Desktop navigation OFF */
+  .topbar nav {
+    display: none !important;
+  }
+
+  /* Mobile brand */
+  .brand-text {
+    display: none !important;
+  }
+
+  .brand-mark {
+    display: flex !important;
+  }
+
+  /* Mobile menu */
+  .mobile-menu {
+    display: block !important;
+  }
+
+  /* Original mobile Hero buttons */
+  .hero-actions {
+    display: flex !important;
+  }
+
+  /* Original social block */
+  .content {
+    display: block !important;
+  }
+
+  .socials {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
