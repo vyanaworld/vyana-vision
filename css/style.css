@@ -2004,3 +2004,23 @@ footer {
     padding: 64px 18px 70px;
   }
 }
+
+   /* =========================================================
+   MOBILE SOUNDLINE — TIGHTER GROUPING
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .soundline-group-vision {
+    margin-top: -6px;
+  }
+
+}
+
+@media (max-width: 390px) {
+
+  .soundline-group-vision {
+    margin-top: -8px;
+  }
+
+}
