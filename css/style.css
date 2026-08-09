@@ -596,12 +596,12 @@ footer {
 
   .soundline-group-vyana {
   justify-self: center;
-  transform: translateX(50px);
+  transform: translateX(58px);
 }
 
 .soundline-group-vision {
   justify-self: center;
-  transform: translateX(-50px);
+  transform: translateX(-58px);
 }
 }
 
