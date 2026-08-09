@@ -1957,3 +1957,50 @@ footer {
     margin-top: 6px;
   }
 }
+
+   /* =========================================================
+   MOBILE — HERO TO WORLD TRANSITION
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: auto;
+    padding-bottom: 22px;
+  }
+
+  .desktop-soundlines {
+    margin-top: 6px;
+    padding-bottom: 18px;
+  }
+
+  .world-section {
+    min-height: auto;
+    padding: 72px 22px 80px;
+    align-items: flex-start;
+  }
+
+  .world-content {
+    width: 100%;
+  }
+
+  .world-symbol {
+    top: 42%;
+    font-size: 340px;
+  }
+}
+
+@media (max-width: 390px) {
+
+  .hero {
+    padding-bottom: 18px;
+  }
+
+  .desktop-soundlines {
+    padding-bottom: 14px;
+  }
+
+  .world-section {
+    padding: 64px 18px 70px;
+  }
+}
