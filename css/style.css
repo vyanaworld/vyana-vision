@@ -1898,3 +1898,62 @@ footer {
     letter-spacing: 0.7px;
   }
 }
+
+   /* =========================================================
+   MOBILE SOUNDLINE — FINAL COMPOSITION TUNING
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* Reduce excessive empty Hero space */
+  .hero {
+    min-height: auto;
+    padding-bottom: 34px;
+  }
+
+  /* Bring soundlines closer to the Hero image */
+  .desktop-soundlines {
+    margin-top: 8px;
+    padding-bottom: 10px;
+  }
+
+  /* First row */
+  .soundline-group-vyana {
+    gap: 12px;
+  }
+
+  /* Second row closer to first */
+  .soundline-group-vision {
+    margin-top: 8px;
+  }
+
+  /* Calm premium text */
+  .soundline-label,
+  .soundline-button,
+  .soundline-button:visited {
+    color: rgba(255, 255, 255, 0.86);
+  }
+
+  .soundline-label {
+    font-weight: 600;
+    text-shadow:
+      0 0 6px rgba(138, 46, 255, 0.42),
+      0 0 10px rgba(0, 200, 255, 0.16);
+  }
+}
+
+@media (max-width: 390px) {
+
+  .hero {
+    padding-bottom: 28px;
+  }
+
+  .desktop-soundlines {
+    margin-top: 6px;
+    padding-bottom: 8px;
+  }
+
+  .soundline-group-vision {
+    margin-top: 6px;
+  }
+}
