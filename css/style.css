@@ -1629,3 +1629,272 @@ footer {
     animation-iteration-count: 1 !important;
   }
 }
+   
+   /* =========================================================
+   VYANA VISION
+   MOBILE SOUNDLINE HERO
+   Desktop layout is NOT affected
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* -------------------------------------------------------
+     1. Keep the approved mobile Hero image composition
+     ------------------------------------------------------- */
+
+  .hero {
+    display: block;
+
+    width: 100%;
+    min-height: 100svh;
+
+    padding-top: calc(78px + 66.67vw);
+    padding-bottom: 70px;
+
+    background-color: var(--color-background);
+    background-position: center 55px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+  }
+
+
+  /* -------------------------------------------------------
+     2. Hide old large mobile buttons
+     ------------------------------------------------------- */
+
+  .hero-center {
+    display: none;
+  }
+
+  .content {
+    display: none;
+  }
+
+
+  /* -------------------------------------------------------
+     3. Use Soundline navigation on mobile
+     ------------------------------------------------------- */
+
+  .desktop-soundlines {
+    position: relative;
+
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+
+    z-index: 6;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    margin: 18px auto 0;
+    padding: 0 14px;
+
+    transform: none;
+  }
+
+
+  /* -------------------------------------------------------
+     4. LISTEN / WATCH / LATEST
+     ------------------------------------------------------- */
+
+  .soundline-group-vyana {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    justify-self: auto;
+
+    width: min(300px, 92vw);
+
+    gap: 8px;
+
+    transform: none;
+  }
+
+
+  /* -------------------------------------------------------
+     5. SPOTIFY / YOUTUBE / TIKTOK / INSTAGRAM
+     ------------------------------------------------------- */
+
+  .soundline-group-vision {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    justify-self: auto;
+
+    width: min(350px, 96vw);
+
+    gap: 5px;
+
+    margin-top: 16px;
+
+    transform: none;
+  }
+
+
+  /* -------------------------------------------------------
+     6. Invisible comfortable touch area
+     Visual button remains small
+     ------------------------------------------------------- */
+
+  .soundline-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 0;
+    min-height: 48px;
+
+    padding: 5px 2px;
+
+    gap: 5px;
+
+    color: rgba(255, 255, 255, 0.82);
+    text-decoration: none;
+
+    background: transparent;
+    border: 0;
+  }
+
+  .soundline-button:visited {
+    color: rgba(255, 255, 255, 0.82);
+  }
+
+
+  /* -------------------------------------------------------
+     7. Sound wave
+     ------------------------------------------------------- */
+
+  .soundline-wave {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    width: 30px;
+    height: 16px;
+
+    gap: 3px;
+
+    filter:
+      drop-shadow(
+        0 0 4px rgba(182, 108, 255, 0.55)
+      )
+      drop-shadow(
+        0 0 7px rgba(0, 200, 255, 0.22)
+      );
+  }
+
+  .soundline-wave i {
+    width: 3px;
+
+    border-radius: 999px;
+
+    background:
+      linear-gradient(
+        to top,
+        rgba(138, 46, 255, 0.9),
+        rgba(0, 200, 255, 0.95)
+      );
+  }
+
+
+  /* -------------------------------------------------------
+     8. Small premium labels
+     ------------------------------------------------------- */
+
+  .soundline-label {
+    font-size: 7.5px;
+    font-weight: 600;
+    line-height: 1;
+
+    letter-spacing: 0.9px;
+
+    white-space: nowrap;
+
+    color: rgba(255, 255, 255, 0.8);
+
+    text-shadow:
+      0 0 5px rgba(138, 46, 255, 0.38),
+      0 0 9px rgba(0, 200, 255, 0.15);
+  }
+
+
+  /* -------------------------------------------------------
+     9. Touch / focus reaction
+     ------------------------------------------------------- */
+
+  .soundline-button:active {
+    transform: scale(0.96);
+  }
+
+  .soundline-button:focus-visible {
+    outline: none;
+
+    filter:
+      drop-shadow(
+        0 0 7px rgba(182, 108, 255, 0.55)
+      );
+  }
+
+  .soundline-button:focus-visible .soundline-wave {
+    filter:
+      drop-shadow(
+        0 0 7px rgba(182, 108, 255, 0.85)
+      )
+      drop-shadow(
+        0 0 12px rgba(0, 200, 255, 0.38)
+      );
+  }
+}
+
+
+/* =========================================================
+   Narrow smartphones
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+  .desktop-soundlines {
+    margin-top: 14px;
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+
+  .soundline-group-vyana {
+    width: min(280px, 94vw);
+    gap: 5px;
+  }
+
+  .soundline-group-vision {
+    width: min(330px, 97vw);
+    gap: 2px;
+
+    margin-top: 12px;
+  }
+
+  .soundline-button {
+    min-height: 46px;
+    padding-right: 1px;
+    padding-left: 1px;
+  }
+
+  .soundline-wave {
+    width: 28px;
+    height: 15px;
+    gap: 2px;
+  }
+
+  .soundline-wave i {
+    width: 2.5px;
+  }
+
+  .soundline-label {
+    font-size: 6.8px;
+    letter-spacing: 0.7px;
+  }
+}
