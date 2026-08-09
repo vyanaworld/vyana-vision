@@ -573,17 +573,23 @@ footer {
     display: none;
   }
 
+   .hero-tagline {
+    display: none;
+  }
+
+}
+
   .desktop-soundlines {
     position: absolute;
-    top: 47.5%;
+    top: 56%;
     left: 50%;
     z-index: 6;
 
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: clamp(80px, 9vw, 150px);
+    column-gap: clamp(110px, 12vw, 190px);
 
-    width: min(820px, 67vw);
+    width: min(860px, 72vw);
 
     transform: translate(-50%, -50%);
   }
