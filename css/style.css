@@ -600,11 +600,15 @@ footer {
     transform: translateX(-60px);
   }
 
-/* Desktop Hero height */
-  .hero {
-    min-height: 88vh;
-    min-height: 88svh;
-  }
+.hero {
+  min-height: 100vh;
+  min-height: 100svh;
+
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-color: var(--color-background);
+}
 
 }
 
