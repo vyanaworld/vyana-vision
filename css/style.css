@@ -600,6 +600,12 @@ footer {
     transform: translateX(-60px);
   }
 
+/* Desktop Hero height */
+  .hero {
+    min-height: 88vh;
+    min-height: 88svh;
+  }
+
 }
 
 /* Tablet and Mobile */
