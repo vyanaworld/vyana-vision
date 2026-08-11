@@ -605,7 +605,7 @@ footer {
   min-height: 100svh;
 
   background-size: 100% auto;
-  background-position: center -120px;
+  background-position: center -85px;
   background-repeat: no-repeat;
   background-color: var(--color-background);
 }
