@@ -2304,3 +2304,66 @@ footer {
       0 0 16px rgba(243, 223, 89, 0.2);
   }
 }
+
+/* =========================================================
+   FINAL DESKTOP HERO RECOVERY
+   Put this block at the VERY END of style.css
+   ========================================================= */
+
+@media (min-width: 769px) {
+
+  .hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+
+    background-color: var(--color-background);
+
+    /* important: same geometry for both layers */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  /* keep mobile controls hidden on desktop */
+  .hero-actions,
+  .content {
+    display: none;
+  }
+
+  .hero-tagline {
+    display: none;
+  }
+
+  /* Desktop soundline navigation */
+  .desktop-soundlines {
+    position: absolute;
+    top: 87%;
+    left: 50%;
+    z-index: 6;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(88px, 9vw, 145px);
+
+    width: min(760px, 60vw);
+
+    transform: translate(-50%, -50%);
+  }
+
+  .soundline-group-vyana {
+    justify-self: center;
+    transform: translateX(54px);
+  }
+
+  .soundline-group-vision {
+    justify-self: center;
+    transform: translateX(-42px);
+  }
+}
