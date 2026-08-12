@@ -1,6 +1,6 @@
 /* =========================================================
    VYANA VISION — Aurora
-   Base styles v0.1
+   Clean working stylesheet
    ========================================================= */
 
 :root {
@@ -14,7 +14,10 @@
   --transition-medium: 600ms ease;
 }
 
-/* Reset */
+
+/* =========================================================
+   Reset
+   ========================================================= */
 
 *,
 *::before,
@@ -33,15 +36,21 @@ html {
 body {
   min-height: 100%;
   overflow-x: hidden;
+
   background: var(--color-background);
   color: var(--color-white);
+
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Hero */
+
+/* =========================================================
+   Hero — Base
+   ========================================================= */
 
 .hero {
   position: relative;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,6 +61,7 @@ body {
   min-height: 100svh;
 
   background-color: var(--color-background);
+
   background-image:
     linear-gradient(
       to bottom,
@@ -60,12 +70,16 @@ body {
       rgba(0, 0, 0, 0.78)
     ),
     url("../assets/vyana-vision-hero-aurora.png");
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-/* Header */
+
+/* =========================================================
+   Header
+   ========================================================= */
 
 .topbar {
   position: relative;
@@ -78,16 +92,22 @@ body {
   width: 100%;
   padding: 22px 5%;
 
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.72),
-    transparent
-  );
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.72),
+      transparent
+    );
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+
   color: var(--color-white);
   text-decoration: none;
+
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 3px;
@@ -95,12 +115,6 @@ body {
   text-shadow:
     0 0 10px rgba(185, 72, 255, 0.85),
     0 0 20px rgba(47, 118, 255, 0.55);
-}
-
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 11px;
 }
 
 .brand-mark {
@@ -130,9 +144,6 @@ body {
   white-space: nowrap;
 }
 
-.mobile-menu {
-  display: none;
-}
 .navigation {
   display: flex;
   align-items: center;
@@ -142,6 +153,7 @@ body {
 .navigation a {
   color: rgba(255, 255, 255, 0.88);
   text-decoration: none;
+
   font-size: 14px;
   letter-spacing: 1px;
 
@@ -156,110 +168,363 @@ body {
   text-shadow: 0 0 10px var(--color-purple);
 }
 
-/* Main content */
+.mobile-menu {
+  display: none;
+}
 
+
+/* =========================================================
+   Legacy Hero controls
+   Present in HTML, hidden in current design
+   ========================================================= */
+
+.hero-center,
 .content {
-  position: absolute;
-  right: 0;
-  bottom: 105px;
-  left: 0;
+  display: none;
+}
+
+
+/* =========================================================
+   Soundline Navigation — Base
+   ========================================================= */
+
+.desktop-soundlines {
+  display: none;
+}
+
+.soundline-group {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: clamp(18px, 2vw, 32px);
+}
+
+.soundline-button {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 7px;
+
+  min-width: 62px;
+  padding: 7px 5px;
+
+  color: rgba(255, 255, 255, 0.76);
+  text-decoration: none;
+
+  transition:
+    color var(--transition-fast),
+    transform var(--transition-fast),
+    filter var(--transition-fast);
+}
+
+.soundline-button:visited {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.soundline-wave {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  gap: 3px;
+
+  width: 34px;
+  height: 18px;
+
+  filter:
+    drop-shadow(0 0 4px rgba(182, 108, 255, 0.42))
+    drop-shadow(0 0 8px rgba(0, 200, 255, 0.16));
+}
+
+.soundline-wave i {
+  display: block;
+
+  width: 3px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(138, 46, 255, 0.88),
+      rgba(0, 200, 255, 0.92)
+    );
+}
+
+
+/* Soundline wave shapes */
+
+.soundline-wave i:nth-child(1) {
+  height: 6px;
+}
+
+.soundline-wave i:nth-child(2) {
+  height: 14px;
+}
+
+.soundline-wave i:nth-child(3) {
+  height: 9px;
+}
+
+.soundline-wave i:nth-child(4) {
+  height: 17px;
+}
+
+.soundline-wave i:nth-child(5) {
+  height: 7px;
+}
+
+
+.soundline-wave-2 i:nth-child(1) {
+  height: 9px;
+}
+
+.soundline-wave-2 i:nth-child(2) {
+  height: 17px;
+}
+
+.soundline-wave-2 i:nth-child(3) {
+  height: 12px;
+}
+
+.soundline-wave-2 i:nth-child(4) {
+  height: 6px;
+}
+
+.soundline-wave-2 i:nth-child(5) {
+  height: 14px;
+}
+
+
+.soundline-wave-3 i:nth-child(1) {
+  height: 6px;
+}
+
+.soundline-wave-3 i:nth-child(2) {
+  height: 10px;
+}
+
+.soundline-wave-3 i:nth-child(3) {
+  height: 18px;
+}
+
+.soundline-wave-3 i:nth-child(4) {
+  height: 12px;
+}
+
+.soundline-wave-3 i:nth-child(5) {
+  height: 7px;
+}
+
+
+.soundline-wave-4 i:nth-child(1) {
+  height: 10px;
+}
+
+.soundline-wave-4 i:nth-child(2) {
+  height: 6px;
+}
+
+.soundline-wave-4 i:nth-child(3) {
+  height: 14px;
+}
+
+.soundline-wave-4 i:nth-child(4) {
+  height: 17px;
+}
+
+.soundline-wave-4 i:nth-child(5) {
+  height: 9px;
+}
+
+
+.soundline-label {
+  font-size: 8px;
+  font-weight: 600;
+  line-height: 1;
+
+  letter-spacing: 1.35px;
+  white-space: nowrap;
+
+  text-shadow:
+    0 0 7px rgba(138, 46, 255, 0.26);
+}
+
+.soundline-button:hover,
+.soundline-button:focus-visible {
+  color: var(--color-white);
+
+  transform: translateY(-2px);
+
+  filter:
+    drop-shadow(0 0 7px rgba(182, 108, 255, 0.35));
+}
+
+.soundline-button:hover .soundline-wave,
+.soundline-button:focus-visible .soundline-wave {
+  filter:
+    drop-shadow(0 0 6px rgba(182, 108, 255, 0.75))
+    drop-shadow(0 0 12px rgba(0, 200, 255, 0.38));
+}
+
+
+/* =========================================================
+   The World of VYANA — Base
+   ========================================================= */
+
+.world-section {
+  position: relative;
+
+  isolation: isolate;
+  overflow: hidden;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  width: 100%;
-  padding: 0 20px;
+  min-height: 720px;
+  padding: 120px 24px;
+
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(110, 35, 255, 0.18),
+      transparent 38%
+    ),
+    linear-gradient(
+      180deg,
+      #020207 0%,
+      #070313 48%,
+      #020207 100%
+    );
 }
 
-/* Platform buttons */
+.world-glow {
+  position: absolute;
 
-.social-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 14px;
+  top: 15%;
+  left: 50%;
+  z-index: -2;
 
-  padding: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.17);
-  border-radius: 26px;
+  width: 520px;
+  height: 520px;
 
-  background: rgba(3, 3, 12, 0.42);
+  border-radius: 50%;
 
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
+  background: rgba(111, 35, 255, 0.13);
 
-  box-shadow:
-    0 0 30px rgba(125, 35, 255, 0.26),
-    0 0 45px rgba(0, 95, 255, 0.15);
+  filter: blur(100px);
+
+  transform: translateX(-50%);
+
+  pointer-events: none;
 }
 
-.social-button {
-  min-width: 130px;
-  padding: 13px 20px;
+.world-symbol {
+  position: absolute;
 
-  border: 1px solid rgba(199, 128, 255, 0.62);
-  border-radius: 30px;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
 
-  background: linear-gradient(
-    135deg,
-    rgba(133, 34, 255, 0.27),
-    rgba(0, 99, 255, 0.18)
-  );
+  color: rgba(182, 108, 255, 0.055);
+
+  font-size: clamp(280px, 42vw, 620px);
+  font-weight: 700;
+  line-height: 0.75;
+
+  text-shadow:
+    0 0 55px rgba(138, 46, 255, 0.1),
+    0 0 100px rgba(0, 200, 255, 0.06);
+
+  transform: translate(-50%, -50%);
+
+  user-select: none;
+  pointer-events: none;
+}
+
+.world-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(760px, 100%);
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.world-label {
+  margin-bottom: 24px;
+
+  color: var(--color-violet);
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+.world-content h2 {
+  margin-bottom: 30px;
 
   color: var(--color-white);
-  text-align: center;
-  text-decoration: none;
-  font-size: 14px;
+
+  font-size: clamp(34px, 5vw, 64px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+
+  text-shadow:
+    0 0 24px rgba(138, 46, 255, 0.2);
+}
+
+.world-description {
+  max-width: 680px;
+
+  margin: 0 auto 18px;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.75;
+}
+
+.world-signature {
+  margin-top: 42px;
+
+  color: #f3df59;
+
+  font-size: clamp(17px, 2vw, 22px);
   font-weight: 600;
-  letter-spacing: 0.8px;
+  letter-spacing: 2px;
 
-  box-shadow:
-    inset 0 0 14px rgba(255, 255, 255, 0.06),
-    0 0 13px rgba(139, 43, 255, 0.3);
-
-  transition:
-    transform var(--transition-fast),
-    background var(--transition-fast),
-    box-shadow var(--transition-fast);
+  text-shadow:
+    0 0 16px rgba(243, 223, 89, 0.2);
 }
 
-.social-button:hover,
-.social-button:focus-visible {
-  transform: translateY(-3px);
 
-  background: linear-gradient(
-    135deg,
-    rgba(181, 62, 255, 0.55),
-    rgba(0, 124, 255, 0.46)
-  );
-
-  box-shadow:
-    0 0 18px rgba(182, 56, 255, 0.72),
-    0 0 28px rgba(0, 111, 255, 0.45);
-}
-
-/* Keyboard accessibility */
-
-a:focus-visible {
-  outline: 2px solid var(--color-blue);
-  outline-offset: 4px;
-}
-
-/* Footer */
+/* =========================================================
+   Footer
+   ========================================================= */
 
 footer {
   width: 100%;
+
   padding: 18px 5% 24px;
 
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.92),
-    rgba(0, 0, 0, 0.35),
-    transparent
-  );
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.92),
+      rgba(0, 0, 0, 0.35),
+      transparent
+    );
 
   color: rgba(255, 255, 255, 0.65);
+
   text-align: center;
   font-size: 12px;
 }
@@ -271,7 +536,9 @@ footer {
 .legal-links a,
 .legal-links a:visited {
   margin: 0 8px;
+
   color: rgba(255, 255, 255, 0.76);
+
   text-decoration: none;
 }
 
@@ -279,755 +546,82 @@ footer {
 .legal-links a:focus-visible {
   color: var(--color-white);
 }
-/* =========================================================
-   Central Hero Content
-   ========================================================= */
 
-.hero-center {
-  position: relative;
-  z-index: 4;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  width: min(760px, 90%);
-  margin: auto;
-  padding: 40px 20px 245px;
-
-  text-align: center;
-}
-
-.hero-tagline {
-  margin-top: 17px;
-
-  color: rgba(255, 255, 255, 0.78);
-  font-size: clamp(11px, 1.2vw, 15px);
-  font-weight: 400;
-  letter-spacing: clamp(3px, 0.65vw, 8px);
-}
-
-.hero-tagline span {
-  color: var(--color-violet);
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 13px;
-
-  margin-top: 30px;
-}
-
-.hero-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  min-width: 158px;
-  min-height: 46px;
-  padding: 12px 22px;
-
-  border: 1px solid rgba(182, 108, 255, 0.55);
-  border-radius: 999px;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(138, 46, 255, 0.18),
-      rgba(0, 200, 255, 0.1)
-    );
-
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-
-  color: var(--color-white);
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1.1px;
-
-  box-shadow:
-    inset 0 0 16px rgba(255, 255, 255, 0.035),
-    0 0 16px rgba(138, 46, 255, 0.18);
-
-  transition:
-    transform var(--transition-fast),
-    border-color var(--transition-fast),
-    background var(--transition-fast),
-    box-shadow var(--transition-fast);
-}
-
-.hero-button:hover,
-.hero-button:focus-visible {
-  transform: translateY(-3px);
-
-  border-color: rgba(0, 200, 255, 0.82);
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(138, 46, 255, 0.4),
-      rgba(0, 200, 255, 0.25)
-    );
-
-  box-shadow:
-    0 0 18px rgba(138, 46, 255, 0.5),
-    0 0 28px rgba(0, 200, 255, 0.25);
-}
-
-.hero-button-primary {
-  border-color: rgba(182, 108, 255, 0.9);
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(138, 46, 255, 0.52),
-      rgba(0, 200, 255, 0.3)
-    );
-}
 
 /* =========================================================
-   Desktop Soundline Navigation
+   Keyboard Accessibility
    ========================================================= */
 
-.desktop-soundlines {
-  display: none;
+a:focus-visible {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 4px;
 }
 
-.soundline-group {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: clamp(18px, 2vw, 32px);
-}
 
-.soundline-button {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 7px;
-
-  min-width: 62px;
-  padding: 7px 5px;
-
-  color: rgba(255, 255, 255, 0.76);
-  text-decoration: none;
-
-  transition:
-    color var(--transition-fast),
-    transform var(--transition-fast),
-    filter var(--transition-fast);
-}
-
-.soundline-button:visited {
-  color: rgba(255, 255, 255, 0.76);
-}
-
-.soundline-wave {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 3px;
-
-  width: 34px;
-  height: 18px;
-
-  filter:
-    drop-shadow(0 0 4px rgba(182, 108, 255, 0.42))
-    drop-shadow(0 0 8px rgba(0, 200, 255, 0.16));
-}
-
-.soundline-wave i {
-  display: block;
-
-  width: 3px;
-  border-radius: 999px;
-
-  background: linear-gradient(
-    to top,
-    rgba(138, 46, 255, 0.88),
-    rgba(0, 200, 255, 0.92)
-  );
-}
-
-/* Different static wave shapes */
-
-.soundline-wave i:nth-child(1) {
-  height: 6px;
-}
-
-.soundline-wave i:nth-child(2) {
-  height: 14px;
-}
-
-.soundline-wave i:nth-child(3) {
-  height: 9px;
-}
-
-.soundline-wave i:nth-child(4) {
-  height: 17px;
-}
-
-.soundline-wave i:nth-child(5) {
-  height: 7px;
-}
-
-.soundline-wave-2 i:nth-child(1) {
-  height: 9px;
-}
-
-.soundline-wave-2 i:nth-child(2) {
-  height: 17px;
-}
-
-.soundline-wave-2 i:nth-child(3) {
-  height: 12px;
-}
-
-.soundline-wave-2 i:nth-child(4) {
-  height: 6px;
-}
-
-.soundline-wave-2 i:nth-child(5) {
-  height: 14px;
-}
-
-.soundline-wave-3 i:nth-child(1) {
-  height: 6px;
-}
-
-.soundline-wave-3 i:nth-child(2) {
-  height: 10px;
-}
-
-.soundline-wave-3 i:nth-child(3) {
-  height: 18px;
-}
-
-.soundline-wave-3 i:nth-child(4) {
-  height: 12px;
-}
-
-.soundline-wave-3 i:nth-child(5) {
-  height: 7px;
-}
-
-.soundline-wave-4 i:nth-child(1) {
-  height: 10px;
-}
-
-.soundline-wave-4 i:nth-child(2) {
-  height: 6px;
-}
-
-.soundline-wave-4 i:nth-child(3) {
-  height: 14px;
-}
-
-.soundline-wave-4 i:nth-child(4) {
-  height: 17px;
-}
-
-.soundline-wave-4 i:nth-child(5) {
-  height: 9px;
-}
-
-.soundline-label {
-  font-size: 8px;
-  font-weight: 600;
-  line-height: 1;
-  letter-spacing: 1.35px;
-  white-space: nowrap;
-
-  text-shadow:
-    0 0 7px rgba(138, 46, 255, 0.26);
-}
-
-.soundline-button:hover,
-.soundline-button:focus-visible {
-  color: var(--color-white);
-  transform: translateY(-2px);
-
-  filter:
-    drop-shadow(0 0 7px rgba(182, 108, 255, 0.35));
-}
-
-.soundline-button:hover .soundline-wave,
-.soundline-button:focus-visible .soundline-wave {
-  filter:
-    drop-shadow(0 0 6px rgba(182, 108, 255, 0.75))
-    drop-shadow(0 0 12px rgba(0, 200, 255, 0.38));
-}
+/* =========================================================
+   Desktop
+   ========================================================= */
 
 @media (min-width: 769px) {
 
-  /* Hide mobile-style Hero controls on desktop */
-  .hero-actions,
-  .content {
-    display: none;
-  }
+  /*
+     Final approved desktop Hero recovery.
+     Keep this geometry as the desktop baseline.
+  */
 
-  .hero-tagline {
-    display: none;
-  }
-
-  /* Desktop Soundline Navigation */
-  .desktop-soundlines {
-    position: absolute;
-    top: 77%;
-    left: 50%;
-    z-index: 6;
-
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: clamp(110px, 12vw, 190px);
-
-    width: min(860px, 72vw);
-
-    transform: translate(-50%, -50%);
-  }
-
-  .soundline-group-vyana {
-    justify-self: center;
-    transform: translateX(76px);
-  }
-
-  .soundline-group-vision {
-    justify-self: center;
-    transform: translateX(-60px);
-  }
-
-.hero {
-  min-height: 100vh;
-  min-height: 100svh;
-
-  background-size:
-    100% 100%,
-    100% auto;
-
-  background-position:
-    center,
-    center -45px;
-
-  background-repeat:
-    no-repeat,
-    no-repeat;
-
-  background-color: var(--color-background);
-}
-
-}
-
-/* Tablet and Mobile */
-
-@media (max-width: 768px) {
   .hero {
-    display: block;
-    min-height: 100svh;
-
-    padding-top: calc(78px + 66.67vw);
-
-    background-color: var(--color-background);
-    background-position: center 55px;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-  }
-
-  .topbar {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-
-  justify-content: space-between;
-  min-height: 50px;
-  padding: 7px 14px;
-
-  background: rgba(2, 2, 7, 0.96);
-  border-bottom: 1px solid rgba(182, 108, 255, 0.13);
-
-  box-shadow:
-    0 8px 25px rgba(0, 0, 0, 0.32);
-}
-
-  .brand {
-  gap: 0;
-  font-size: 16px;
-  letter-spacing: 0;
-}
-
-.brand-mark {
-  width: 32px;
-  height: 32px;
-}
-
-.brand-text {
-  display: none;
-}
-
-  .navigation {
-    display: none;
-  }
-   .mobile-menu {
-  position: relative;
-  display: block;
-}
-
-.mobile-menu summary {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-
-  width: 36px;
-  height: 36px;
-  padding: 8px;
-
-  border: 1px solid rgba(182, 108, 255, 0.45);
-  border-radius: 50%;
-
-  background: rgba(9, 5, 25, 0.58);
-  cursor: pointer;
-
-  list-style: none;
-
-  box-shadow:
-    inset 0 0 12px rgba(255, 255, 255, 0.035),
-    0 0 14px rgba(138, 46, 255, 0.25);
-}
-
-.mobile-menu summary::-webkit-details-marker {
-  display: none;
-}
-
-.mobile-menu summary span {
-  display: block;
-
-  width: 100%;
-  height: 1px;
-
-  background: rgba(255, 255, 255, 0.88);
-  border-radius: 999px;
-
-  transition:
-    transform var(--transition-fast),
-    opacity var(--transition-fast);
-}
-
-.mobile-menu[open] summary span:nth-child(1) {
-  transform: translateY(6px) rotate(45deg);
-}
-
-.mobile-menu[open] summary span:nth-child(2) {
-  opacity: 0;
-}
-
-.mobile-menu[open] summary span:nth-child(3) {
-  transform: translateY(-6px) rotate(-45deg);
-}
-
-.mobile-navigation {
-  position: absolute;
-  top: calc(100% + 8px);
-  right: 0;
-
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-
-  width: 170px;
-  padding: 8px;
-
-  border: 1px solid rgba(182, 108, 255, 0.42);
-  border-radius: 16px;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(26, 12, 58, 0.58),
-      rgba(3, 8, 28, 0.48)
-    );
-
-  -webkit-backdrop-filter: blur(22px) saturate(135%);
-  backdrop-filter: blur(22px) saturate(135%);
-
-  box-shadow:
-    inset 0 0 18px rgba(255, 255, 255, 0.035),
-    0 14px 32px rgba(0, 0, 0, 0.46),
-    0 0 26px rgba(108, 33, 255, 0.24);
-}
-
-.mobile-navigation a {
-  padding: 10px 12px;
-  border-radius: 10px;
-
-  color: rgba(255, 255, 255, 0.88);
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.7px;
-}
-
-.mobile-navigation a:hover,
-.mobile-navigation a:focus-visible {
-  background: rgba(138, 46, 255, 0.18);
-  color: var(--color-white);
-}
-
-  /* Tagline and primary actions */
-
-  .hero-center {
     position: relative;
-    z-index: 4;
-
-    width: 100%;
-    margin: -48px auto 0;
-    padding: 0 16px;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    justify-content: space-between;
 
-    text-align: center;
+    width: 100%;
+
+    min-height: 100vh;
+    min-height: 100svh;
+
+    background-color: var(--color-background);
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
 
-  .hero-tagline {
-    margin: 0;
 
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 9px;
-    font-weight: 400;
-    line-height: 1.3;
-    letter-spacing: 3px;
-    white-space: nowrap;
-
-    text-shadow:
-      0 0 6px rgba(138, 46, 255, 0.28),
-      0 0 12px rgba(0, 200, 255, 0.12);
-  }
-
-   /* CLOSE FIRST MOBILE MEDIA */
-}
-
-/* =========================================================
-   Desktop Soundline Navigation
-   ========================================================= */
-
-.desktop-soundlines {
-  display: none;
-}
-
-.soundline-group {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: clamp(18px, 2vw, 32px);
-}
-
-.soundline-button {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 7px;
-
-  min-width: 62px;
-  padding: 7px 5px;
-
-  color: rgba(255, 255, 255, 0.76);
-  text-decoration: none;
-
-  transition:
-    color var(--transition-fast),
-    transform var(--transition-fast),
-    filter var(--transition-fast);
-}
-
-.soundline-button:visited {
-  color: rgba(255, 255, 255, 0.76);
-}
-
-.soundline-wave {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 3px;
-
-  width: 34px;
-  height: 18px;
-
-  filter:
-    drop-shadow(0 0 4px rgba(182, 108, 255, 0.42))
-    drop-shadow(0 0 8px rgba(0, 200, 255, 0.16));
-}
-
-.soundline-wave i {
-  display: block;
-  width: 3px;
-  border-radius: 999px;
-
-  background: linear-gradient(
-    to top,
-    rgba(138, 46, 255, 0.88),
-    rgba(0, 200, 255, 0.92)
-  );
-}
-
-/* Different static wave shapes */
-
-.soundline-wave i:nth-child(1) {
-  height: 6px;
-}
-
-.soundline-wave i:nth-child(2) {
-  height: 14px;
-}
-
-.soundline-wave i:nth-child(3) {
-  height: 9px;
-}
-
-.soundline-wave i:nth-child(4) {
-  height: 17px;
-}
-
-.soundline-wave i:nth-child(5) {
-  height: 7px;
-}
-
-.soundline-wave-2 i:nth-child(1) {
-  height: 9px;
-}
-
-.soundline-wave-2 i:nth-child(2) {
-  height: 17px;
-}
-
-.soundline-wave-2 i:nth-child(3) {
-  height: 12px;
-}
-
-.soundline-wave-2 i:nth-child(4) {
-  height: 6px;
-}
-
-.soundline-wave-2 i:nth-child(5) {
-  height: 14px;
-}
-
-.soundline-wave-3 i:nth-child(1) {
-  height: 6px;
-}
-
-.soundline-wave-3 i:nth-child(2) {
-  height: 10px;
-}
-
-.soundline-wave-3 i:nth-child(3) {
-  height: 18px;
-}
-
-.soundline-wave-3 i:nth-child(4) {
-  height: 12px;
-}
-
-.soundline-wave-3 i:nth-child(5) {
-  height: 7px;
-}
-
-.soundline-wave-4 i:nth-child(1) {
-  height: 10px;
-}
-
-.soundline-wave-4 i:nth-child(2) {
-  height: 6px;
-}
-
-.soundline-wave-4 i:nth-child(3) {
-  height: 14px;
-}
-
-.soundline-wave-4 i:nth-child(4) {
-  height: 17px;
-}
-
-.soundline-wave-4 i:nth-child(5) {
-  height: 9px;
-}
-
-.soundline-label {
-  font-size: 8px;
-  font-weight: 600;
-  line-height: 1;
-  letter-spacing: 1.35px;
-  white-space: nowrap;
-
-  text-shadow:
-    0 0 7px rgba(138, 46, 255, 0.26);
-}
-
-.soundline-button:hover,
-.soundline-button:focus-visible {
-  color: var(--color-white);
-  transform: translateY(-2px);
-
-  filter:
-    drop-shadow(0 0 7px rgba(182, 108, 255, 0.35));
-}
-
-.soundline-button:hover .soundline-wave,
-.soundline-button:focus-visible .soundline-wave {
-  filter:
-    drop-shadow(0 0 6px rgba(182, 108, 255, 0.75))
-    drop-shadow(0 0 12px rgba(0, 200, 255, 0.38));
-}
-
-
-/* =========================================================
-   Desktop only
-   ========================================================= */
-
-@media (min-width: 769px) {
-
-  /* Hide mobile-style controls on desktop */
-
-  .hero-actions,
-  .content {
-    display: none;
-  }
-
-  .hero-tagline {
-    display: none;
-  }
-
-  /* Approved desktop Soundline position */
+  /* Desktop Soundline Navigation */
 
   .desktop-soundlines {
     position: absolute;
-    top: 85%;
+
+    top: 87%;
     left: 50%;
     z-index: 6;
 
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: clamp(110px, 12vw, 190px);
 
-    width: min(860px, 72vw);
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    column-gap:
+      clamp(88px, 9vw, 145px);
+
+    width: min(760px, 60vw);
 
     transform: translate(-50%, -50%);
   }
 
   .soundline-group-vyana {
     justify-self: center;
-    transform: translateX(76px);
+
+    transform: translateX(54px);
   }
 
   .soundline-group-vision {
     justify-self: center;
-    transform: translateX(-60px);
+
+    transform: translateX(-42px);
   }
 }
 
@@ -1038,25 +632,34 @@ footer {
 
 @media (max-width: 768px) {
 
-  /* Hero image */
+  /* -------------------------------------------------------
+     Mobile Hero
+     ------------------------------------------------------- */
 
   .hero {
     display: block;
 
-    min-height: 100svh;
+    width: 100%;
+    min-height: auto;
 
     padding-top: calc(78px + 66.67vw);
+    padding-bottom: 22px;
 
     background-color: var(--color-background);
+
     background-position: center 55px;
     background-size: 100% auto;
     background-repeat: no-repeat;
   }
 
-  /* Header */
+
+  /* -------------------------------------------------------
+     Mobile Header
+     ------------------------------------------------------- */
 
   .topbar {
     position: absolute;
+
     top: 0;
     right: 0;
     left: 0;
@@ -1064,6 +667,7 @@ footer {
     justify-content: space-between;
 
     min-height: 50px;
+
     padding: 7px 14px;
 
     background: rgba(2, 2, 7, 0.96);
@@ -1095,16 +699,14 @@ footer {
     display: none;
   }
 
-  /* Desktop Soundline must never appear on mobile */
 
-  .desktop-soundlines {
-    display: none;
-  }
-
-  /* Mobile hamburger */
+  /* -------------------------------------------------------
+     Mobile Hamburger
+     ------------------------------------------------------- */
 
   .mobile-menu {
     position: relative;
+
     display: block;
   }
 
@@ -1112,10 +714,12 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     gap: 5px;
 
     width: 36px;
     height: 36px;
+
     padding: 8px;
 
     border:
@@ -1127,6 +731,7 @@ footer {
       rgba(9, 5, 25, 0.58);
 
     cursor: pointer;
+
     list-style: none;
 
     box-shadow:
@@ -1148,10 +753,10 @@ footer {
     width: 100%;
     height: 1px;
 
+    border-radius: 999px;
+
     background:
       rgba(255, 255, 255, 0.88);
-
-    border-radius: 999px;
 
     transition:
       transform var(--transition-fast),
@@ -1172,18 +777,24 @@ footer {
       translateY(-6px) rotate(-45deg);
   }
 
-  /* Mobile menu panel */
+
+  /* -------------------------------------------------------
+     Mobile Menu Panel
+     ------------------------------------------------------- */
 
   .mobile-navigation {
     position: absolute;
+
     top: calc(100% + 8px);
     right: 0;
 
     display: flex;
     flex-direction: column;
+
     gap: 2px;
 
     width: 170px;
+
     padding: 8px;
 
     border:
@@ -1234,584 +845,8 @@ footer {
   }
 
 
-  /* =======================================================
-     Mobile Hero controls
-     ======================================================= */
-
-  .hero-center {
-    position: relative;
-    z-index: 4;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    width: 100%;
-
-    margin: -48px auto 0;
-    padding: 0 16px;
-
-    text-align: center;
-  }
-
-  .hero-tagline {
-    margin: 0;
-
-    color:
-      rgba(255, 255, 255, 0.7);
-
-    font-size: 9px;
-    font-weight: 400;
-    line-height: 1.3;
-    letter-spacing: 3px;
-
-    white-space: nowrap;
-
-    text-shadow:
-      0 0 6px rgba(138, 46, 255, 0.28),
-      0 0 12px rgba(0, 200, 255, 0.12);
-  }
-
-  /* Smaller approved-style primary buttons */
-
-  .hero-actions {
-    display: grid;
-
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
-
-    gap: 8px 10px;
-
-    width: 100%;
-    max-width: 348px;
-
-    margin-top: 84px;
-  }
-
-  .hero-actions .hero-button:last-child {
-    grid-column: 1 / -1;
-
-    justify-self: center;
-
-    width: 54%;
-  }
-
-  .hero-button {
-    width: 100%;
-
-    min-width: 0;
-    min-height: 38px;
-
-    padding: 8px;
-
-    font-size: 8.8px;
-    letter-spacing: 0.45px;
-
-    white-space: nowrap;
-  }
-
-
-  /* =======================================================
-     Mobile streaming platforms
-     ======================================================= */
-
-  .content {
-    position: relative;
-
-    right: auto;
-    bottom: auto;
-    left: auto;
-
-    display: block;
-
-    width: 100%;
-
-    margin-top: 8px;
-    padding: 0 12px;
-  }
-
-  .social-buttons {
-    display: grid;
-
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
-
-    gap: 10px;
-
-    width: 100%;
-    max-width: 372px;
-
-    margin: 0 auto;
-    padding: 12px;
-
-    background:
-      rgba(3, 3, 13, 0.82);
-  }
-
-  .social-button {
-    width: 100%;
-
-    min-width: 0;
-
-    padding: 11px 6px;
-
-    font-size: 12.5px;
-
-    white-space: nowrap;
-  }
-
-
-  /* =======================================================
-     Mobile footer
-     ======================================================= */
-
-  footer {
-    position: relative;
-
-    right: auto;
-    bottom: auto;
-    left: auto;
-
-    width: 100%;
-
-    margin-top: 50px;
-    padding: 15px 8px 18px;
-
-    background:
-      linear-gradient(
-        to top,
-        rgba(0, 0, 0, 1),
-        rgba(0, 0, 0, 0.65),
-        transparent
-      );
-  }
-
-  .legal-links {
-    display: flex;
-    justify-content: center;
-    gap: 13px;
-
-    margin-bottom: 9px;
-  }
-
-  .legal-links a {
-    margin: 0;
-    font-size: 14px;
-  }
-
-
-  /* =======================================================
-     The World of VYANA — Mobile
-     ======================================================= */
-
-  .world-section {
-    min-height: 620px;
-    padding: 90px 22px;
-  }
-
-  .world-symbol {
-    top: 47%;
-    font-size: 340px;
-  }
-
-  .world-label {
-    margin-bottom: 20px;
-
-    font-size: 10px;
-    letter-spacing: 3.4px;
-  }
-
-  .world-content h2 {
-    margin-bottom: 25px;
-
-    font-size: 38px;
-    line-height: 1.12;
-  }
-
-  .world-description {
-    font-size: 16px;
-    line-height: 1.65;
-  }
-
-  .world-signature {
-    margin-top: 34px;
-
-    font-size: 17px;
-    letter-spacing: 1.4px;
-  }
-}
-
-
-/* =========================================================
-   Small Mobile
-   ========================================================= */
-
-@media (max-width: 390px) {
-
-  .brand {
-    font-size: 16px;
-    letter-spacing: 2px;
-  }
-
-  .hero-center {
-    margin-top: -80px;
-
-    padding-right: 10px;
-    padding-left: 10px;
-  }
-
-  .hero-tagline {
-    margin-top: -33px;
-
-    font-size: 8px;
-    letter-spacing: 1.5px;
-  }
-
-  .hero-actions {
-    gap: 8px;
-
-    max-width: 330px;
-
-    margin-top: 82px;
-  }
-
-  .hero-actions .hero-button:last-child {
-    width: 56%;
-  }
-
-  .hero-button {
-    min-height: 36px;
-
-    padding-right: 5px;
-    padding-left: 5px;
-
-    font-size: 8.2px;
-  }
-
-  .content {
-    margin-top: 1px;
-  }
-
-  .social-buttons {
-    gap: 8px;
-
-    max-width: 350px;
-
-    padding: 10px;
-  }
-
-  .social-button {
-    padding: 10px 4px;
-
-    font-size: 11.8px;
-  }
-
-  .legal-links {
-    gap: 9px;
-  }
-
-  .legal-links a {
-    font-size: 12px;
-  }
-
-  footer {
-    margin-top: 20px;
-
-    font-size: 11px;
-  }
-}
-
-/* =========================================================
-   The World of VYANA
-   ========================================================= */
-
-.world-section {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  min-height: 720px;
-  padding: 120px 24px;
-
-  background:
-    radial-gradient(
-      circle at 50% 35%,
-      rgba(110, 35, 255, 0.18),
-      transparent 38%
-    ),
-    linear-gradient(
-      180deg,
-      #020207 0%,
-      #070313 48%,
-      #020207 100%
-    );
-}
-
-.world-glow {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  z-index: -2;
-
-  width: 520px;
-  height: 520px;
-
-  border-radius: 50%;
-
-  background: rgba(111, 35, 255, 0.13);
-  filter: blur(100px);
-  transform: translateX(-50%);
-
-  pointer-events: none;
-}
-
-.world-symbol {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: -1;
-
-  color: rgba(182, 108, 255, 0.055);
-  font-size: clamp(280px, 42vw, 620px);
-  font-weight: 700;
-  line-height: 0.75;
-
-  text-shadow:
-    0 0 55px rgba(138, 46, 255, 0.1),
-    0 0 100px rgba(0, 200, 255, 0.06);
-
-  transform: translate(-50%, -50%);
-  user-select: none;
-  pointer-events: none;
-}
-
-.world-content {
-  width: min(760px, 100%);
-  text-align: center;
-}
-
-.world-label {
-  margin-bottom: 24px;
-
-  color: var(--color-violet);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 5px;
-}
-
-.world-content h2 {
-  margin-bottom: 30px;
-
-  color: var(--color-white);
-  font-size: clamp(34px, 5vw, 64px);
-  font-weight: 500;
-  line-height: 1.08;
-  letter-spacing: -1.5px;
-
-  text-shadow:
-    0 0 24px rgba(138, 46, 255, 0.2);
-}
-
-.world-description {
-  max-width: 680px;
-  margin: 0 auto 18px;
-
-  color: rgba(255, 255, 255, 0.7);
-  font-size: clamp(16px, 2vw, 20px);
-  line-height: 1.75;
-}
-
-.world-signature {
-  margin-top: 42px;
-
-  color: #f3df59;
-  font-size: clamp(17px, 2vw, 22px);
-  font-weight: 600;
-  letter-spacing: 2px;
-
-  text-shadow:
-    0 0 16px rgba(243, 223, 89, 0.2);
-}
-
-   /* =========================================================
-   The World of VYANA
-   ========================================================= */
-
-.world-section {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  min-height: 720px;
-  padding: 120px 24px;
-
-  background:
-    radial-gradient(
-      circle at 50% 35%,
-      rgba(110, 35, 255, 0.18),
-      transparent 38%
-    ),
-    linear-gradient(
-      180deg,
-      #020207 0%,
-      #070313 48%,
-      #020207 100%
-    );
-}
-
-.world-glow {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  z-index: -2;
-
-  width: 520px;
-  height: 520px;
-
-  border-radius: 50%;
-
-  background: rgba(111, 35, 255, 0.13);
-  filter: blur(100px);
-  transform: translateX(-50%);
-
-  pointer-events: none;
-}
-
-.world-symbol {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: -1;
-
-  color: rgba(182, 108, 255, 0.055);
-  font-size: clamp(280px, 42vw, 620px);
-  font-weight: 700;
-  line-height: 0.75;
-
-  text-shadow:
-    0 0 55px rgba(138, 46, 255, 0.1),
-    0 0 100px rgba(0, 200, 255, 0.06);
-
-  transform: translate(-50%, -50%);
-  user-select: none;
-  pointer-events: none;
-}
-
-.world-content {
-  width: min(760px, 100%);
-  text-align: center;
-}
-
-.world-label {
-  margin-bottom: 24px;
-
-  color: var(--color-violet);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 5px;
-}
-
-.world-content h2 {
-  margin-bottom: 30px;
-
-  color: var(--color-white);
-  font-size: clamp(34px, 5vw, 64px);
-  font-weight: 500;
-  line-height: 1.08;
-  letter-spacing: -1.5px;
-
-  text-shadow:
-    0 0 24px rgba(138, 46, 255, 0.2);
-}
-
-.world-description {
-  max-width: 680px;
-  margin: 0 auto 18px;
-
-  color: rgba(255, 255, 255, 0.7);
-  font-size: clamp(16px, 2vw, 20px);
-  line-height: 1.75;
-}
-
-.world-signature {
-  margin-top: 42px;
-
-  color: #f3df59;
-  font-size: clamp(17px, 2vw, 22px);
-  font-weight: 600;
-  letter-spacing: 2px;
-
-  text-shadow:
-    0 0 16px rgba(243, 223, 89, 0.2);
-}
-
-/* Reduced motion */
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-  }
-}
-   
-   /* =========================================================
-   VYANA VISION
-   MOBILE SOUNDLINE HERO
-   Desktop layout is NOT affected
-   ========================================================= */
-
-@media (max-width: 768px) {
-
   /* -------------------------------------------------------
-     1. Keep the approved mobile Hero image composition
-     ------------------------------------------------------- */
-
-  .hero {
-    display: block;
-
-    width: 100%;
-    min-height: 100svh;
-
-    padding-top: calc(78px + 66.67vw);
-    padding-bottom: 70px;
-
-    background-color: var(--color-background);
-    background-position: center 55px;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-  }
-
-
-  /* -------------------------------------------------------
-     2. Hide old large mobile buttons
-     ------------------------------------------------------- */
-
-  .hero-center {
-    display: none;
-  }
-
-  .content {
-    display: none;
-  }
-
-
-  /* -------------------------------------------------------
-     3. Use Soundline navigation on mobile
+     Mobile Soundline Navigation
      ------------------------------------------------------- */
 
   .desktop-soundlines {
@@ -1830,55 +865,54 @@ footer {
 
     width: 100%;
 
-    margin: 18px auto 0;
-    padding: 0 14px;
+    margin: 6px auto 0;
+
+    padding:
+      0 14px 18px;
 
     transform: none;
   }
 
 
-  /* -------------------------------------------------------
-     4. LISTEN / WATCH / LATEST
-     ------------------------------------------------------- */
+  /* LISTEN / WATCH / LATEST */
 
   .soundline-group-vyana {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
 
-    justify-self: auto;
+    grid-template-columns:
+      repeat(3, 1fr);
 
     width: min(300px, 92vw);
 
-    gap: 8px;
+    gap: 12px;
+
+    justify-self: auto;
 
     transform: none;
   }
 
 
-  /* -------------------------------------------------------
-     5. SPOTIFY / YOUTUBE / TIKTOK / INSTAGRAM
-     ------------------------------------------------------- */
+  /* SPOTIFY / YOUTUBE / TIKTOK / INSTAGRAM */
 
   .soundline-group-vision {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
 
-    justify-self: auto;
+    grid-template-columns:
+      repeat(4, 1fr);
 
     width: min(350px, 96vw);
 
     gap: 5px;
 
-    margin-top: 16px;
+    margin-top: -10px;
+
+    justify-self: auto;
 
     transform: none;
   }
 
 
-  /* -------------------------------------------------------
-     6. Invisible comfortable touch area
-     Visual button remains small
-     ------------------------------------------------------- */
+  /* Mobile touch area */
 
   .soundline-button {
     display: flex;
@@ -1886,28 +920,30 @@ footer {
     align-items: center;
     justify-content: center;
 
+    gap: 5px;
+
     min-width: 0;
     min-height: 48px;
 
     padding: 5px 2px;
 
-    gap: 5px;
-
-    color: rgba(255, 255, 255, 0.82);
-    text-decoration: none;
+    border: 0;
 
     background: transparent;
-    border: 0;
+
+    color:
+      rgba(255, 255, 255, 0.86);
+
+    text-decoration: none;
   }
 
   .soundline-button:visited {
-    color: rgba(255, 255, 255, 0.82);
+    color:
+      rgba(255, 255, 255, 0.86);
   }
 
 
-  /* -------------------------------------------------------
-     7. Sound wave
-     ------------------------------------------------------- */
+  /* Mobile Soundline Wave */
 
   .soundline-wave {
     display: flex;
@@ -1942,11 +978,12 @@ footer {
   }
 
 
-  /* -------------------------------------------------------
-     8. Small premium labels
-     ------------------------------------------------------- */
+  /* Mobile Soundline Labels */
 
   .soundline-label {
+    color:
+      rgba(255, 255, 255, 0.86);
+
     font-size: 7.5px;
     font-weight: 600;
     line-height: 1;
@@ -1955,17 +992,10 @@ footer {
 
     white-space: nowrap;
 
-    color: rgba(255, 255, 255, 0.8);
-
     text-shadow:
-      0 0 5px rgba(138, 46, 255, 0.38),
-      0 0 9px rgba(0, 200, 255, 0.15);
+      0 0 6px rgba(138, 46, 255, 0.42),
+      0 0 10px rgba(0, 200, 255, 0.16);
   }
-
-
-  /* -------------------------------------------------------
-     9. Touch / focus reaction
-     ------------------------------------------------------- */
 
   .soundline-button:active {
     transform: scale(0.96);
@@ -1989,35 +1019,112 @@ footer {
         0 0 12px rgba(0, 200, 255, 0.38)
       );
   }
+
+
+  /* -------------------------------------------------------
+     The World of VYANA — Mobile
+     ------------------------------------------------------- */
+
+  .world-section {
+    min-height: auto;
+
+    padding:
+      72px 22px 80px;
+
+    align-items: flex-start;
+  }
+
+  .world-content {
+    width: 100%;
+  }
+
+  .world-symbol {
+    top: 42%;
+
+    font-size: 340px;
+  }
+
+
+  /* -------------------------------------------------------
+     Mobile Footer
+     ------------------------------------------------------- */
+
+  footer {
+    position: relative;
+
+    width: 100%;
+
+    margin-top: 50px;
+
+    padding:
+      15px 8px 18px;
+
+    background:
+      linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.65),
+        transparent
+      );
+  }
+
+  .legal-links {
+    display: flex;
+    justify-content: center;
+
+    gap: 13px;
+
+    margin-bottom: 9px;
+  }
+
+  .legal-links a {
+    margin: 0;
+
+    font-size: 14px;
+  }
 }
 
 
 /* =========================================================
-   Narrow smartphones
+   Narrow Smartphones
    ========================================================= */
 
 @media (max-width: 390px) {
 
+  .hero {
+    padding-bottom: 18px;
+  }
+
+  .brand {
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+
   .desktop-soundlines {
-    margin-top: 14px;
+    margin-top: 6px;
+
     padding-right: 8px;
+    padding-bottom: 14px;
     padding-left: 8px;
   }
 
   .soundline-group-vyana {
     width: min(280px, 94vw);
+
     gap: 5px;
   }
 
   .soundline-group-vision {
     width: min(330px, 97vw);
+
     gap: 2px;
 
-    margin-top: 12px;
+    margin-top: -12px;
   }
 
   .soundline-button {
     min-height: 46px;
+
     padding-right: 1px;
     padding-left: 1px;
   }
@@ -2025,6 +1132,7 @@ footer {
   .soundline-wave {
     width: 28px;
     height: 15px;
+
     gap: 2px;
   }
 
@@ -2036,334 +1144,43 @@ footer {
     font-size: 6.8px;
     letter-spacing: 0.7px;
   }
-}
-
-   /* =========================================================
-   MOBILE SOUNDLINE — FINAL COMPOSITION TUNING
-   ========================================================= */
-
-@media (max-width: 768px) {
-
-  /* Reduce excessive empty Hero space */
-  .hero {
-    min-height: auto;
-    padding-bottom: 34px;
-  }
-
-  /* Bring soundlines closer to the Hero image */
-  .desktop-soundlines {
-    margin-top: 8px;
-    padding-bottom: 10px;
-  }
-
-  /* First row */
-  .soundline-group-vyana {
-    gap: 12px;
-  }
-
-  /* Second row closer to first */
-  .soundline-group-vision {
-    margin-top: 8px;
-  }
-
-  /* Calm premium text */
-  .soundline-label,
-  .soundline-button,
-  .soundline-button:visited {
-    color: rgba(255, 255, 255, 0.86);
-  }
-
-  .soundline-label {
-    font-weight: 600;
-    text-shadow:
-      0 0 6px rgba(138, 46, 255, 0.42),
-      0 0 10px rgba(0, 200, 255, 0.16);
-  }
-}
-
-@media (max-width: 390px) {
-
-  .hero {
-    padding-bottom: 28px;
-  }
-
-  .desktop-soundlines {
-    margin-top: 6px;
-    padding-bottom: 8px;
-  }
-
-  .soundline-group-vision {
-    margin-top: 6px;
-  }
-}
-
-   /* =========================================================
-   MOBILE — HERO TO WORLD TRANSITION
-   ========================================================= */
-
-@media (max-width: 768px) {
-
-  .hero {
-    min-height: auto;
-    padding-bottom: 22px;
-  }
-
-  .desktop-soundlines {
-    margin-top: 6px;
-    padding-bottom: 18px;
-  }
 
   .world-section {
-    min-height: auto;
-    padding: 72px 22px 80px;
-    align-items: flex-start;
+    padding:
+      64px 18px 70px;
   }
 
-  .world-content {
-    width: 100%;
+  .legal-links {
+    gap: 9px;
   }
 
-  .world-symbol {
-    top: 42%;
-    font-size: 340px;
-  }
-}
-
-@media (max-width: 390px) {
-
-  .hero {
-    padding-bottom: 18px;
+  .legal-links a {
+    font-size: 12px;
   }
 
-  .desktop-soundlines {
-    padding-bottom: 14px;
-  }
+  footer {
+    margin-top: 20px;
 
-  .world-section {
-    padding: 64px 18px 70px;
+    font-size: 11px;
   }
 }
 
-   /* =========================================================
-   MOBILE SOUNDLINE — TIGHTER GROUPING
-   ========================================================= */
-
-@media (max-width: 768px) {
-
-  .soundline-group-vision {
-    margin-top: -10px;
-  }
-
-}
-
-@media (max-width: 390px) {
-
-  .soundline-group-vision {
-    margin-top: -12px;
-  }
-
-}
 
 /* =========================================================
-   FINAL DESKTOP — THE WORLD OF VYANA
+   Reduced Motion
    ========================================================= */
 
-@media (min-width: 769px) {
+@media (prefers-reduced-motion: reduce) {
 
-  .world-section {
-    position: relative !important;
-    isolation: isolate;
-    overflow: hidden;
-
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    width: 100%;
-    min-height: 720px !important;
-
-    padding: 120px 24px !important;
-
-    background:
-      radial-gradient(
-        circle at 50% 35%,
-        rgba(110, 35, 255, 0.18),
-        transparent 38%
-      ),
-      linear-gradient(
-        180deg,
-        #020207 0%,
-        #070313 48%,
-        #020207 100%
-      ) !important;
+  html {
+    scroll-behavior: auto;
   }
 
-  .world-glow {
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    z-index: -2;
-
-    width: 520px;
-    height: 520px;
-
-    border-radius: 50%;
-
-    background: rgba(111, 35, 255, 0.13);
-    filter: blur(100px);
-
-    transform: translateX(-50%);
-    pointer-events: none;
-  }
-
-  .world-symbol {
-    position: absolute !important;
-
-    top: 50% !important;
-    left: 50% !important;
-
-    z-index: -1;
-
-    color: rgba(182, 108, 255, 0.055);
-
-    font-size: clamp(280px, 42vw, 620px) !important;
-    font-weight: 700;
-    line-height: 0.75;
-
-    text-shadow:
-      0 0 55px rgba(138, 46, 255, 0.1),
-      0 0 100px rgba(0, 200, 255, 0.06);
-
-    transform: translate(-50%, -50%) !important;
-
-    user-select: none;
-    pointer-events: none;
-  }
-
-  .world-content {
-    position: relative;
-    z-index: 2;
-
-    width: min(760px, 100%) !important;
-    margin: 0 auto !important;
-
-    text-align: center !important;
-  }
-
-  .world-label {
-    margin-bottom: 24px !important;
-
-    color: var(--color-violet) !important;
-
-    font-size: 12px !important;
-    font-weight: 700 !important;
-    letter-spacing: 5px !important;
-  }
-
-  .world-content h2 {
-    margin: 0 0 30px !important;
-
-    color: var(--color-white) !important;
-
-    font-size: clamp(34px, 5vw, 64px) !important;
-    font-weight: 500 !important;
-    line-height: 1.08 !important;
-    letter-spacing: -1.5px !important;
-
-    text-align: center !important;
-
-    text-shadow:
-      0 0 24px rgba(138, 46, 255, 0.2);
-  }
-
-  .world-description {
-    max-width: 680px !important;
-
-    margin: 0 auto 18px !important;
-
-    color: rgba(255, 255, 255, 0.7) !important;
-
-    font-size: clamp(16px, 2vw, 20px) !important;
-    line-height: 1.75 !important;
-
-    text-align: center !important;
-  }
-
-  .world-signature {
-    margin-top: 42px !important;
-
-    color: #f3df59 !important;
-
-    font-size: clamp(17px, 2vw, 22px) !important;
-    font-weight: 600 !important;
-    letter-spacing: 2px !important;
-
-    text-align: center !important;
-
-    text-shadow:
-      0 0 16px rgba(243, 223, 89, 0.2);
-  }
-}
-
-/* =========================================================
-   FINAL DESKTOP HERO RECOVERY
-   Put this block at the VERY END of style.css
-   ========================================================= */
-
-@media (min-width: 769px) {
-
-  .hero {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: space-between;
-
-    width: 100%;
-    min-height: 100vh;
-    min-height: 100svh;
-
-    background-color: var(--color-background);
-
-    /* important: same geometry for both layers */
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
-
-  /* keep mobile controls hidden on desktop */
-  .hero-actions,
-  .content {
-    display: none;
-  }
-
-  .hero-tagline {
-    display: none;
-  }
-
-  /* Desktop soundline navigation */
-  .desktop-soundlines {
-    position: absolute;
-    top: 87%;
-    left: 50%;
-    z-index: 6;
-
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: clamp(88px, 9vw, 145px);
-
-    width: min(760px, 60vw);
-
-    transform: translate(-50%, -50%);
-  }
-
-  .soundline-group-vyana {
-    justify-self: center;
-    transform: translateX(54px);
-  }
-
-  .soundline-group-vision {
-    justify-self: center;
-    transform: translateX(-42px);
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
