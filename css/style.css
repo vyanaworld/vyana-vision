@@ -570,24 +570,32 @@ a:focus-visible {
   */
 
   .hero {
-    position: relative;
+  position: relative;
 
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
 
-    width: 100%;
+  width: 100%;
 
-    min-height: 100vh;
-    min-height: 100svh;
+  min-height: 100vh;
+  min-height: 100svh;
 
-    background-color: var(--color-background);
+  background-color: var(--color-background);
 
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
+  background-size:
+    100% 100%,
+    96% auto;
+
+  background-position:
+    center,
+    center top;
+
+  background-repeat:
+    no-repeat,
+    no-repeat;
+}
 
 
   /* Desktop Soundline Navigation */
