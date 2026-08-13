@@ -1,6 +1,6 @@
-9/* =========================================================
-   VYANA VISION — Aurora
-   Clean Base v1.0
+/* =========================================================
+   VYANA VISION — AURORA
+   CLEAN MASTER CSS v1.0
    ========================================================= */
 
 :root {
@@ -9,6 +9,7 @@
   --color-purple: #8a2eff;
   --color-blue: #00c8ff;
   --color-violet: #b66cff;
+  --color-gold: #f3df59;
 
   --transition-fast: 250ms ease;
   --transition-medium: 600ms ease;
@@ -16,7 +17,7 @@
 
 
 /* =========================================================
-   Reset
+   RESET
    ========================================================= */
 
 *,
@@ -45,7 +46,7 @@ body {
 
 
 /* =========================================================
-   Hero — Base
+   HERO — BASE
    ========================================================= */
 
 .hero {
@@ -57,6 +58,7 @@ body {
   justify-content: space-between;
 
   width: 100%;
+
   min-height: 100vh;
   min-height: 100svh;
 
@@ -71,14 +73,14 @@ body {
     ),
     url("../assets/vyana-vision-hero-aurora.png");
 
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-repeat:
+    no-repeat,
+    no-repeat;
 }
 
 
 /* =========================================================
-   Header
+   HEADER
    ========================================================= */
 
 .topbar {
@@ -90,6 +92,7 @@ body {
   justify-content: space-between;
 
   width: 100%;
+
   padding: 22px 5%;
 
   background:
@@ -100,9 +103,16 @@ body {
     );
 }
 
-.brand {
+
+/* Brand */
+
+.brand,
+.brand:visited,
+.brand:hover,
+.brand:focus-visible {
   display: inline-flex;
   align-items: center;
+
   gap: 11px;
 
   color: var(--color-white);
@@ -125,6 +135,8 @@ body {
   width: 32px;
   height: 32px;
 
+  flex: 0 0 32px;
+
   border: 1px solid rgba(182, 108, 255, 0.65);
   border-radius: 50%;
 
@@ -142,16 +154,22 @@ body {
 }
 
 .brand-text {
+  color: var(--color-white);
   white-space: nowrap;
 }
+
+
+/* Desktop navigation */
 
 .navigation {
   display: flex;
   align-items: center;
+
   gap: 24px;
 }
 
-.navigation a {
+.navigation a,
+.navigation a:visited {
   color: rgba(255, 255, 255, 0.88);
 
   text-decoration: none;
@@ -172,14 +190,17 @@ body {
     0 0 10px var(--color-purple);
 }
 
+
+/* Mobile menu hidden by default */
+
 .mobile-menu {
   display: none;
 }
 
 
 /* =========================================================
-   Old Hero controls
-   Kept in HTML but not used in current design
+   OLD HERO CONTROLS
+   Still present in HTML but intentionally unused
    ========================================================= */
 
 .hero-center,
@@ -189,7 +210,7 @@ body {
 
 
 /* =========================================================
-   Soundline Navigation — Base
+   SOUNDLINE NAVIGATION — BASE
    ========================================================= */
 
 .desktop-soundlines {
@@ -204,7 +225,8 @@ body {
   gap: clamp(18px, 2vw, 32px);
 }
 
-.soundline-button {
+.soundline-button,
+.soundline-button:visited {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -216,7 +238,7 @@ body {
 
   padding: 7px 5px;
 
-  color: rgba(255, 255, 255, 0.76);
+  color: rgba(255, 255, 255, 0.82);
 
   text-decoration: none;
 
@@ -226,9 +248,8 @@ body {
     filter var(--transition-fast);
 }
 
-.soundline-button:visited {
-  color: rgba(255, 255, 255, 0.76);
-}
+
+/* Soundline wave */
 
 .soundline-wave {
   display: flex;
@@ -241,8 +262,8 @@ body {
   height: 18px;
 
   filter:
-    drop-shadow(0 0 4px rgba(182, 108, 255, 0.42))
-    drop-shadow(0 0 8px rgba(0, 200, 255, 0.16));
+    drop-shadow(0 0 4px rgba(182, 108, 255, 0.48))
+    drop-shadow(0 0 8px rgba(0, 200, 255, 0.2));
 }
 
 .soundline-wave i {
@@ -255,15 +276,13 @@ body {
   background:
     linear-gradient(
       to top,
-      rgba(138, 46, 255, 0.88),
-      rgba(0, 200, 255, 0.92)
+      rgba(138, 46, 255, 0.92),
+      rgba(0, 200, 255, 0.96)
     );
 }
 
 
-/* =========================================================
-   Soundline Shapes
-   ========================================================= */
+/* Wave shape 1 */
 
 .soundline-wave i:nth-child(1) {
   height: 6px;
@@ -286,6 +305,8 @@ body {
 }
 
 
+/* Wave shape 2 */
+
 .soundline-wave-2 i:nth-child(1) {
   height: 9px;
 }
@@ -306,6 +327,8 @@ body {
   height: 14px;
 }
 
+
+/* Wave shape 3 */
 
 .soundline-wave-3 i:nth-child(1) {
   height: 6px;
@@ -328,6 +351,8 @@ body {
 }
 
 
+/* Wave shape 4 */
+
 .soundline-wave-4 i:nth-child(1) {
   height: 10px;
 }
@@ -349,21 +374,26 @@ body {
 }
 
 
-/* =========================================================
-   Soundline Labels / Interaction
-   ========================================================= */
+/* Soundline labels */
 
 .soundline-label {
+  color: rgba(255, 255, 255, 0.86);
+
   font-size: 8px;
   font-weight: 600;
   line-height: 1;
 
   letter-spacing: 1.35px;
+
   white-space: nowrap;
 
   text-shadow:
-    0 0 7px rgba(138, 46, 255, 0.26);
+    0 0 7px rgba(138, 46, 255, 0.35),
+    0 0 10px rgba(0, 200, 255, 0.12);
 }
+
+
+/* Interaction */
 
 .soundline-button:hover,
 .soundline-button:focus-visible {
@@ -372,19 +402,19 @@ body {
   transform: translateY(-2px);
 
   filter:
-    drop-shadow(0 0 7px rgba(182, 108, 255, 0.35));
+    drop-shadow(0 0 7px rgba(182, 108, 255, 0.4));
 }
 
 .soundline-button:hover .soundline-wave,
 .soundline-button:focus-visible .soundline-wave {
   filter:
-    drop-shadow(0 0 6px rgba(182, 108, 255, 0.75))
-    drop-shadow(0 0 12px rgba(0, 200, 255, 0.38));
+    drop-shadow(0 0 6px rgba(182, 108, 255, 0.78))
+    drop-shadow(0 0 12px rgba(0, 200, 255, 0.4));
 }
 
 
 /* =========================================================
-   The World of VYANA
+   THE WORLD OF VYANA
    ========================================================= */
 
 .world-section {
@@ -398,6 +428,7 @@ body {
   justify-content: center;
 
   width: 100%;
+
   min-height: 720px;
 
   padding: 120px 24px;
@@ -416,6 +447,9 @@ body {
     );
 }
 
+
+/* World glow */
+
 .world-glow {
   position: absolute;
 
@@ -433,10 +467,14 @@ body {
 
   filter: blur(100px);
 
-  transform: translateX(-50%);
+  transform:
+    translateX(-50%);
 
   pointer-events: none;
 }
+
+
+/* Large translucent V */
 
 .world-symbol {
   position: absolute;
@@ -465,11 +503,15 @@ body {
   pointer-events: none;
 }
 
+
+/* World text */
+
 .world-content {
   position: relative;
   z-index: 2;
 
-  width: min(760px, 100%);
+  width:
+    min(760px, 100%);
 
   margin: 0 auto;
 
@@ -488,7 +530,8 @@ body {
 }
 
 .world-content h2 {
-  margin-bottom: 30px;
+  margin:
+    0 0 30px;
 
   color: var(--color-white);
 
@@ -499,6 +542,8 @@ body {
   line-height: 1.08;
 
   letter-spacing: -1.5px;
+
+  text-align: center;
 
   text-shadow:
     0 0 24px rgba(138, 46, 255, 0.2);
@@ -517,12 +562,14 @@ body {
     clamp(16px, 2vw, 20px);
 
   line-height: 1.75;
+
+  text-align: center;
 }
 
 .world-signature {
   margin-top: 42px;
 
-  color: #f3df59;
+  color: var(--color-gold);
 
   font-size:
     clamp(17px, 2vw, 22px);
@@ -531,13 +578,15 @@ body {
 
   letter-spacing: 2px;
 
+  text-align: center;
+
   text-shadow:
     0 0 16px rgba(243, 223, 89, 0.2);
 }
 
 
 /* =========================================================
-   Footer
+   FOOTER
    ========================================================= */
 
 footer {
@@ -568,7 +617,8 @@ footer {
 
 .legal-links a,
 .legal-links a:visited {
-  margin: 0 8px;
+  margin:
+    0 8px;
 
   color:
     rgba(255, 255, 255, 0.76);
@@ -583,7 +633,7 @@ footer {
 
 
 /* =========================================================
-   Keyboard Accessibility
+   ACCESSIBILITY
    ========================================================= */
 
 a:focus-visible {
@@ -595,20 +645,20 @@ a:focus-visible {
 
 
 /* =========================================================
-   Desktop
-   769px and larger
+   DESKTOP
+   769px +
    ========================================================= */
 
 @media (min-width: 769px) {
 
   /* -------------------------------------------------------
      Desktop Hero
-     Current approved Notebook composition
+     Approved composition:
+     image scale 94%
+     centered vertically
      ------------------------------------------------------- */
 
   .hero {
-    position: relative;
-
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -619,22 +669,12 @@ a:focus-visible {
     min-height: 100vh;
     min-height: 100svh;
 
-    background-color:
-      var(--color-background);
-
-    /*
-      Layer 1 = gradient
-      Layer 2 = Hero artwork
-
-      94% is the current approved Desktop image scale.
-    */
-
     background-size:
       100% 100%,
       94% auto;
 
     background-position:
-      center,
+      center center,
       center center;
 
     background-repeat:
@@ -650,7 +690,7 @@ a:focus-visible {
   .desktop-soundlines {
     position: absolute;
 
-    top: 79%;
+    top: 63%;
     left: 50%;
     z-index: 6;
 
@@ -669,12 +709,18 @@ a:focus-visible {
       translate(-50%, -50%);
   }
 
+
+  /* Group under VYANA */
+
   .soundline-group-vyana {
     justify-self: center;
 
     transform:
       translateX(54px);
   }
+
+
+  /* Group under VISION */
 
   .soundline-group-vision {
     justify-self: center;
@@ -686,7 +732,7 @@ a:focus-visible {
 
 
 /* =========================================================
-   Tablet / Mobile
+   TABLET / MOBILE
    768px and smaller
    ========================================================= */
 
@@ -700,6 +746,7 @@ a:focus-visible {
     display: block;
 
     width: 100%;
+
     min-height: auto;
 
     padding-top:
@@ -707,16 +754,16 @@ a:focus-visible {
 
     padding-bottom: 22px;
 
-    background-color:
-      var(--color-background);
-
-    background-position:
-      center 55px;
-
     background-size:
+      100% 100%,
       100% auto;
 
+    background-position:
+      center center,
+      center 55px;
+
     background-repeat:
+      no-repeat,
       no-repeat;
   }
 
@@ -731,9 +778,6 @@ a:focus-visible {
     top: 0;
     right: 0;
     left: 0;
-
-    justify-content:
-      space-between;
 
     min-height: 50px;
 
@@ -752,8 +796,16 @@ a:focus-visible {
       rgba(0, 0, 0, 0.32);
   }
 
-  .brand {
+
+  /* Mobile brand */
+
+  .brand,
+  .brand:visited,
+  .brand:hover,
+  .brand:focus-visible {
     gap: 0;
+
+    color: var(--color-white);
 
     font-size: 16px;
 
@@ -761,13 +813,20 @@ a:focus-visible {
   }
 
   .brand-mark {
+    display: flex;
+
     width: 32px;
     height: 32px;
+
+    color: var(--color-white);
   }
 
   .brand-text {
     display: none;
   }
+
+
+  /* Desktop navigation OFF */
 
   .navigation {
     display: none;
@@ -914,7 +973,8 @@ a:focus-visible {
       rgba(108, 33, 255, 0.24);
   }
 
-  .mobile-navigation a {
+  .mobile-navigation a,
+  .mobile-navigation a:visited {
     padding:
       10px 12px;
 
@@ -936,13 +996,12 @@ a:focus-visible {
     background:
       rgba(138, 46, 255, 0.18);
 
-    color:
-      var(--color-white);
+    color: var(--color-white);
   }
 
 
   /* -------------------------------------------------------
-     Mobile Soundlines
+     Mobile Soundline Navigation
      ------------------------------------------------------- */
 
   .desktop-soundlines {
@@ -984,13 +1043,11 @@ a:focus-visible {
 
     gap: 12px;
 
-    justify-self: auto;
-
     transform: none;
   }
 
 
-  /* Spotify / YouTube / TikTok / Instagram */
+  /* SPOTIFY / YOUTUBE / TIKTOK / INSTAGRAM */
 
   .soundline-group-vision {
     display: grid;
@@ -1005,17 +1062,14 @@ a:focus-visible {
 
     margin-top: -10px;
 
-    justify-self: auto;
-
     transform: none;
   }
 
 
-  /* -------------------------------------------------------
-     Mobile Soundline Button
-     ------------------------------------------------------- */
+  /* Mobile touch area */
 
-  .soundline-button {
+  .soundline-button,
+  .soundline-button:visited {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1035,19 +1089,10 @@ a:focus-visible {
 
     color:
       rgba(255, 255, 255, 0.86);
-
-    text-decoration: none;
-  }
-
-  .soundline-button:visited {
-    color:
-      rgba(255, 255, 255, 0.86);
   }
 
 
-  /* -------------------------------------------------------
-     Mobile Soundline Wave
-     ------------------------------------------------------- */
+  /* Mobile wave */
 
   .soundline-wave {
     width: 30px;
@@ -1068,19 +1113,10 @@ a:focus-visible {
 
   .soundline-wave i {
     width: 3px;
-
-    background:
-      linear-gradient(
-        to top,
-        rgba(138, 46, 255, 0.9),
-        rgba(0, 200, 255, 0.95)
-      );
   }
 
 
-  /* -------------------------------------------------------
-     Mobile Soundline Label
-     ------------------------------------------------------- */
+  /* Mobile label */
 
   .soundline-label {
     color:
@@ -1093,8 +1129,6 @@ a:focus-visible {
 
     letter-spacing: 0.9px;
 
-    white-space: nowrap;
-
     text-shadow:
       0 0 6px
       rgba(138, 46, 255, 0.42),
@@ -1104,35 +1138,13 @@ a:focus-visible {
   }
 
   .soundline-button:active {
-    transform: scale(0.96);
-  }
-
-  .soundline-button:focus-visible {
-    outline: none;
-
-    filter:
-      drop-shadow(
-        0 0 7px
-        rgba(182, 108, 255, 0.55)
-      );
-  }
-
-  .soundline-button:focus-visible
-  .soundline-wave {
-    filter:
-      drop-shadow(
-        0 0 7px
-        rgba(182, 108, 255, 0.85)
-      )
-      drop-shadow(
-        0 0 12px
-        rgba(0, 200, 255, 0.38)
-      );
+    transform:
+      scale(0.96);
   }
 
 
   /* -------------------------------------------------------
-     World — Mobile
+     World of VYANA — Mobile
      ------------------------------------------------------- */
 
   .world-section {
@@ -1154,33 +1166,53 @@ a:focus-visible {
     font-size: 340px;
   }
 
+  .world-label {
+    color: var(--color-violet);
+
+    font-size: 10px;
+
+    letter-spacing: 3.4px;
+  }
+
+  .world-content h2 {
+    color: var(--color-white);
+
+    font-size: 38px;
+
+    line-height: 1.12;
+  }
+
+  .world-description {
+    color:
+      rgba(255, 255, 255, 0.7);
+
+    font-size: 16px;
+
+    line-height: 1.65;
+  }
+
+  .world-signature {
+    color: var(--color-gold);
+
+    font-size: 17px;
+
+    letter-spacing: 1.4px;
+  }
+
 
   /* -------------------------------------------------------
-     Footer — Mobile
+     Mobile Footer
      ------------------------------------------------------- */
 
   footer {
-    position: relative;
-
-    width: 100%;
-
     margin-top: 50px;
 
     padding:
       15px 8px 18px;
-
-    background:
-      linear-gradient(
-        to top,
-        rgba(0, 0, 0, 1),
-        rgba(0, 0, 0, 0.65),
-        transparent
-      );
   }
 
   .legal-links {
     display: flex;
-
     justify-content: center;
 
     gap: 13px;
@@ -1197,7 +1229,7 @@ a:focus-visible {
 
 
 /* =========================================================
-   Narrow Smartphones
+   NARROW SMARTPHONES
    390px and smaller
    ========================================================= */
 
@@ -1205,12 +1237,6 @@ a:focus-visible {
 
   .hero {
     padding-bottom: 18px;
-  }
-
-  .brand {
-    font-size: 16px;
-
-    letter-spacing: 2px;
   }
 
   .desktop-soundlines {
@@ -1283,7 +1309,7 @@ a:focus-visible {
 
 
 /* =========================================================
-   Reduced Motion
+   REDUCED MOTION
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
