@@ -1331,3 +1331,429 @@ a:focus-visible {
       1 !important;
   }
 }
+
+/* =========================================================
+   LATEST RELEASES
+   ========================================================= */
+
+.releases-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  width: 100%;
+  padding: 120px 24px;
+
+  background:
+    radial-gradient(
+      circle at 50% 30%,
+      rgba(138, 46, 255, 0.14),
+      transparent 38%
+    ),
+    linear-gradient(
+      180deg,
+      #020207 0%,
+      #05020d 48%,
+      #020207 100%
+    );
+}
+
+.releases-glow {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  z-index: -1;
+
+  width: 520px;
+  height: 520px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(111, 35, 255, 0.1);
+
+  filter: blur(110px);
+
+  transform: translateX(-50%);
+
+  pointer-events: none;
+}
+
+.releases-container {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.releases-heading {
+  margin-bottom: 56px;
+  text-align: center;
+}
+
+.releases-label {
+  margin-bottom: 18px;
+
+  color: var(--color-violet);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 5px;
+}
+
+.releases-heading h2 {
+  color: var(--color-white);
+
+  font-size:
+    clamp(34px, 5vw, 58px);
+
+  font-weight: 500;
+  line-height: 1.08;
+
+  letter-spacing: -1.2px;
+
+  text-shadow:
+    0 0 24px rgba(138, 46, 255, 0.18);
+}
+
+
+/* =========================================================
+   Featured release
+   ========================================================= */
+
+.featured-release {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 0.92fr);
+
+  align-items: center;
+
+  gap: clamp(42px, 7vw, 90px);
+
+  width: 100%;
+}
+
+.featured-release-cover {
+  position: relative;
+
+  width: 100%;
+  max-width: 520px;
+
+  justify-self: end;
+}
+
+.featured-release-cover::before {
+  content: "";
+
+  position: absolute;
+  inset: -18px;
+  z-index: -1;
+
+  border-radius: 34px;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(154, 61, 255, 0.22),
+      transparent 62%
+    );
+
+  filter: blur(24px);
+
+  opacity: 0.8;
+}
+
+.featured-release-cover img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 22px 60px rgba(0, 0, 0, 0.52),
+    0 0 28px rgba(138, 46, 255, 0.16),
+    0 0 38px rgba(0, 200, 255, 0.08);
+}
+
+
+/* =========================================================
+   Featured release text
+   ========================================================= */
+
+.featured-release-content {
+  width: min(430px, 100%);
+}
+
+.featured-release-kicker {
+  margin-bottom: 14px;
+
+  color: var(--color-violet);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+.featured-release-content h3 {
+  margin-bottom: 22px;
+
+  color: var(--color-white);
+
+  font-size:
+    clamp(38px, 4vw, 64px);
+
+  font-weight: 500;
+  line-height: 1.02;
+
+  letter-spacing: -1.2px;
+
+  text-shadow:
+    0 0 22px rgba(138, 46, 255, 0.18);
+}
+
+.featured-release-description {
+  max-width: 390px;
+
+  color:
+    rgba(255, 255, 255, 0.68);
+
+  font-size:
+    clamp(16px, 1.6vw, 19px);
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   Release actions
+   ========================================================= */
+
+.featured-release-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 22px;
+
+  margin-top: 34px;
+}
+
+.release-action,
+.release-action:visited {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  min-width: 118px;
+  min-height: 58px;
+
+  padding: 8px 12px;
+
+  color:
+    rgba(255, 255, 255, 0.84);
+
+  text-decoration: none;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: 1.4px;
+
+  transition:
+    transform var(--transition-fast),
+    filter var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.release-action-wave {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  gap: 3px;
+
+  width: 34px;
+  height: 18px;
+
+  filter:
+    drop-shadow(
+      0 0 5px rgba(182, 108, 255, 0.52)
+    )
+    drop-shadow(
+      0 0 9px rgba(0, 200, 255, 0.2)
+    );
+}
+
+.release-action-wave i {
+  display: block;
+
+  width: 3px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(138, 46, 255, 0.92),
+      rgba(0, 200, 255, 0.96)
+    );
+}
+
+.release-action-wave i:nth-child(1) {
+  height: 7px;
+}
+
+.release-action-wave i:nth-child(2) {
+  height: 14px;
+}
+
+.release-action-wave i:nth-child(3) {
+  height: 18px;
+}
+
+.release-action-wave i:nth-child(4) {
+  height: 11px;
+}
+
+.release-action-wave i:nth-child(5) {
+  height: 8px;
+}
+
+.release-action:hover,
+.release-action:focus-visible {
+  color: var(--color-white);
+
+  transform: translateY(-3px);
+
+  filter:
+    drop-shadow(
+      0 0 9px rgba(182, 108, 255, 0.42)
+    );
+}
+
+
+/* =========================================================
+   Tablet / Mobile
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .releases-section {
+    padding:
+      78px 20px 86px;
+  }
+
+  .releases-heading {
+    margin-bottom: 40px;
+  }
+
+  .releases-label {
+    margin-bottom: 16px;
+
+    font-size: 10px;
+
+    letter-spacing: 3.4px;
+  }
+
+  .releases-heading h2 {
+    font-size: 38px;
+    line-height: 1.12;
+  }
+
+  .featured-release {
+    grid-template-columns: 1fr;
+
+    gap: 38px;
+  }
+
+  .featured-release-cover {
+    width: min(420px, 100%);
+
+    justify-self: center;
+  }
+
+  .featured-release-content {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .featured-release-kicker {
+    font-size: 9px;
+    letter-spacing: 3px;
+  }
+
+  .featured-release-content h3 {
+    margin-bottom: 18px;
+
+    font-size: 40px;
+  }
+
+  .featured-release-description {
+    max-width: 360px;
+
+    margin:
+      0 auto;
+
+    font-size: 16px;
+  }
+
+  .featured-release-actions {
+    justify-content: center;
+
+    gap: 26px;
+
+    margin-top: 28px;
+  }
+}
+
+
+/* =========================================================
+   Small mobile
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+  .releases-section {
+    padding:
+      64px 16px 72px;
+  }
+
+  .releases-heading {
+    margin-bottom: 34px;
+  }
+
+  .releases-heading h2 {
+    font-size: 34px;
+  }
+
+  .featured-release {
+    gap: 32px;
+  }
+
+  .featured-release-cover {
+    width:
+      min(340px, 100%);
+  }
+
+  .featured-release-cover img {
+    border-radius: 20px;
+  }
+
+  .featured-release-content h3 {
+    font-size: 35px;
+  }
+
+  .featured-release-actions {
+    gap: 18px;
+  }
+
+  .release-action {
+    min-width: 104px;
+  }
+}
